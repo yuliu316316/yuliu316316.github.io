@@ -1,0 +1,2550 @@
+<!DOCTYPE html>
+
+<html class="csstransforms csstransforms3d csstransitions">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>YU LIU</title>
+	<link href="./PROFILE_files/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<link href="./PROFILE_files/style.css" rel="stylesheet" type="text/css" media="all">
+	<link href="./PROFILE_files/prettyPhoto.css" rel="stylesheet" type="text/css" media="all">
+	<link href="./PROFILE_files/css" rel="stylesheet" type="text/css">
+
+	<style>
+		.header {
+			background: #0B2D64;
+			/* 你想换色就改这里 */
+		}
+
+		:root {
+			--nav-h: 72px;
+			--sidebar-w: 300px;
+		}
+
+		/* 建议加上，避免默认 margin 导致布局怪异 */
+		body {
+			margin: 0;
+		}
+
+		/* 侧边栏（fixed 版本） */
+		.sidebar {
+			position: fixed;
+			top: var(--nav-h);
+			left: 0;
+			width: var(--sidebar-w);
+			padding: 0;
+			background-color: #f5f5f5;
+
+			/* 你原来用 100% 很容易不等于视口高度，改成 100vh 更稳定 */
+			height: calc(100vh - var(--nav-h));
+			overflow-y: auto;
+		}
+
+		.thumbnail-people {
+			padding: 4px;
+			margin-bottom: 5px;
+			line-height: 1.42857143;
+			text-align: center;
+		}
+
+		/* ⭐关键：正文让位 + 宽度扣掉侧边栏，彻底解决“遮住” */
+		.content {
+			margin-left: var(--sidebar-w);
+			width: calc(100% - var(--sidebar-w));
+			box-sizing: border-box;
+			padding: 16px 24px;
+			min-width: 0;
+
+		}
+
+		.people-photo {
+			border-radius: 50%;
+			height: 200px !important;
+			width: 200px !important;
+			box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.2), 0 5px 12px 0 rgba(0, 0, 0, 0.19);
+			margin-bottom: 5px;
+		}
+
+		.content,
+		.grid3,
+		.grid3-content {
+			background: #fff;
+		}
+
+		/* 小屏：不挤压/不遮挡，直接变成上下结构（最省事） */
+		@media (max-width: 900px) {
+			.sidebar {
+				position: static;
+				width: 100%;
+				height: auto;
+			}
+
+			.content {
+				margin-left: 0;
+				width: 100%;
+				padding: 16px;
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+	<!---start-wrap--->
+	<!---start-header--->
+	<div class="header">
+		<div class="wrap">
+			<!---start-logo--->
+			<div class="logo">
+				<a href=" ">Yu Liu</a>
+			</div>
+			<!---End-logo--->
+			<!---start-top-nav--->
+			<div class="top-nav">
+				<ul>
+					<li id="Home" onclick="func(&#39;Me&#39;)"><a href="https://yuliu316316.github.io/"
+							class="scroll">Home</a></li>
+					<li id="Profile" onclick="func(&#39;Profile&#39;)"><a href="https://yuliu316316.github.io/PROFILE.html"
+							class="scroll">Profile</a></li>
+
+					<li id="Profile" onclick="func(&#39;Profile&#39;)"><a href="https://yuliu316316.github.io/PUBLICATIONS.html"
+							class="scroll">Publications</a></li>
+					<li id="MVPLab" onclick="func(&#39;MVP Lab&#39;)"><a href="https://yuliu316316.github.io/GROUP.html"
+							class="scroll">Group</a></li>
+					<li id="Profile" onclick="func(&#39;Profile&#39;)"><a href="https://yuliu316316.github.io/CONTACT.html"
+							class="scroll">CONTACT</a></li>
+					<!--<li id="Profile" onclick="func(&#39;Profile&#39;)"><a href="https://yuliu316316.github.io/Chinese.html"
+							class="scroll">中文简介</a></li>-->
+				</ul>
+			</div>
+			<div class="clear"> </div>
+			<!---End-top-nav--->
+		</div>
+	</div>
+
+	<script>
+		var lastname = 'Me';
+		function func(name) {
+			var div = document.getElementById(name);
+			div.className = 'active';
+			div = document.getElementById(lastname);
+			div.className = '';
+			lastname = name;
+		}
+		function coming_soon() {
+			alert("Coming soon.");
+		}
+	</script>
+
+	<!---End-wrap--->
+
+	<div class="sidebar">
+		<!-- 侧边栏内容 -->
+		<br>
+		<br>
+		<br>
+		<div class="thumbnail-people">
+			<a href="https://yuliu316316.github.io/PROFILE.html">
+				<img src="./PROFILE_files/ly.png" class="people-photo">
+			</a>
+		</div>
+		<br>
+		<ul style="text-align: center; list-style: none; padding: 0;">
+			<li><strong>Yu Liu (刘羽)</strong></li><br>
+			<li>Professor@HFUT</li><br>
+			<li>Hefei Anhui China</li>
+		</ul>
+		<br>
+		<br>
+		<br>
+		<ul style="text-align: center; list-style: none; padding: 0;">
+			<li>Email: yuliu@hfut.edu.cn</li><br>
+			<li><a href="https://scholar.google.com/citations?user=r4cmlNgAAAAJ&hl=en" target="_blank">
+					<font color="#034EA1">Google Scholar</font>
+				</a></li><br>
+			<li><a href="https://orcid.org/0000-0003-2211-3535" target="_blank">
+					<font color="#034EA1">ORCID</font>
+				</a></li><br>
+			<li><a href="https://dblp.org/pid/97/2274-23.html" target="_blank">
+					<font color="#034EA1">DBLP</font>
+				</a></li><br>
+			<li><a href="https://github.com/yuliu316316" target="_blank">
+					<font color="#034EA1">Github</font>
+				</a></li><br>
+			<li><a href="https://yuliu316316.github.io/Chinese.html" target="_blank">
+					<font color="#034EA1">中文个人主页</font>
+				</a></li><br>
+
+
+		</ul>
+	</div>
+
+	<div class="content">
+
+
+		<div class="grid3">
+			<div class="grid3-content">
+
+
+
+				<h3><b>Profile
+					</b></h3>
+
+				<ul class="graid3-ul" style="list-style-type:none; ">
+					<div style="text-align: justify; display: block; margin-right: auto;">
+
+						<li>
+							<p><strong>Yu Liu</strong> (IEEE Senior Member) received the B.S. degree and Ph. D degree from the Department of Automation, University of Science and Technology of China (USTC) in 2011 and 2016, respectively. 
+								He is currently a Full Professor and the Head of the Department of Biomedical Engineering at Hefei University of Technology (HFUT). 
+								His research interests include image processing, computer vision and machine learning. 
+								In particular, his current research is mainly focused on image fusion, image restoration, visual recognition, medical image segmentation, and signal/image/video-based biomedical applications. 
+								He has published over 100 scientific articles in prestigious journals (e.g., IEEE TPAMI/TIP/TNNLS/TMM/TCSVT/TGRS/TIM/TCI/TBME/JBHI/JSTSP/SPL, IJCV, MedIA, INFFUS, ISPRS P&RS, PR) and conferences (e.g., CVPR, ICCV, AAAI, ICME, ICIP). 
+								Among them, 28 journal articles have been identified as ESI Highly Cited Papers. His publications have totally received over 20000 citations (Google Scholar). 
+								He is serving as an Associate Editor for IEEE Transactions on Image Processing and IEEE Signal Processing Letters, and an Editorial Board Member for Information Fusion. 
+								He was a recipient of the IEEE Instrumentation and Measurement Society Andi Chi Best Paper Award in 2020 and the IET Image Processing Premium (Best Paper) Award in 2017. 
+								He was identified as a <strong>Clarivate Highly Cited Researcher</strong> (2023, 2024, 2025). He was identified as an Elsevier Highly Cited Chinese Researcher (2020, 2021, 2022, 2023, 2024 and 2025).
+								<br>
+							</p>
+						</li>
+					</div>
+				</ul>
+				<hr>
+
+				<h3><b>Education &amp; Work Experience</b></h3>
+				<ul class="graid3-ul" style="list-style-type:disc; ">
+					<div style="text-align: justify; display: block; margin-right: auto;">
+
+						<li> 2022/12-Now: Professor <br>
+							Department of Biomedical Engineering, School of Instrument Science and Opto-electronics Engineering, <br>
+							<a href="https://www.hfut.edu.cn/">
+								<font color="#034EA1">Hefei University of Technology </font>
+							</a>(HFUT), Hefei, China <br>
+							------------------------------------------------------------------------------------------------------------
+						</li>
+
+						<li> 2019/01-2022/11: Associate Professor <br>
+							Department of Biomedical Engineering, School of Instrument Science and Opto-electronics Engineering, <br>
+							Hefei University of Technology (HFUT), Hefei, China <br>
+							------------------------------------------------------------------------------------------------------------
+						</li>
+
+						<li> 2016/07-2018/12: Lecturer <br>
+							Department of Biomedical Engineering, School of Instrument Science and Opto-electronics Engineering, <br>
+							Hefei University of Technology (HFUT), Hefei, China <br>
+
+							------------------------------------------------------------------------------------------------------------
+						</li>
+
+						<li> 2011/09-2016/06: Ph.D. <br>
+							Department of Automation, School of Information Science and Technology, <br>
+							 <a href="https://www.ustc.edu.cn/">
+								<font color="#034EA1">University of Science and Technology of China </font>
+							</a>(USTC), Hefei, China <br>
+							Supervisor: Prof. Zengfu Wang <br>
+
+							------------------------------------------------------------------------------------------------------------
+						</li>
+
+						<li> 2007/09-2011/06: B.S. <br>
+							Department of Automation, School of Information Science and Technology, <br>
+							University of Science and Technology of China (USTC), Hefei, China
+							<br>
+							GPA: 3.97/4.3, Rank: 1/105.<br>
+
+					</div>
+				</ul>
+				<hr>
+
+				<!--
+				<h3><b>Research Interests:</b></h3>
+				<ul class="graid3-ul" style="list-style-type:disc;">
+					<div style="text-align: justify; display: block; margin-right: auto;">
+						My research interests lie in image processing, computer vision and machine learning. In
+						particular, my current research is mainly focused on multi-source image fusion and perception,
+						image restoration, medical image segmentation, etc.
+
+						<li> <strong>Multi-Source Image Fusion and Perception</strong>: <br>
+							Exploring image fusion solutions for infrared and visible images, medical images,
+							multi-focus images, and multi-exposure images.</li>
+
+						<li> <strong>Image Restoration</strong>:<br>
+							Exploring image restoration solutions for extreme weather conditions such as rain, snow, and
+							fog, as well as practical scenarios including blur, noise, low-light, and low-resolution.
+						</li>
+
+						<li> <strong>Medical Image Segmentation</strong>:<br>
+							Exploring solutions for semantic segmentation, object detection, and classification in
+							real-world medical scenarios.</li>
+
+					</div>
+				</ul>
+				<hr>
+                -->
+
+
+				<h3><b>Research Grants</b></h3>
+				<ul class="graid3-ul" style="list-style-type:disc;">
+					<div style="text-align: justify; display: block; margin-right: auto;">
+
+
+						<li>2026/01-2029/12, National Natural Science Foundation of China, PI
+							 (Grant No. 62576132) 
+						</li>
+						<li>2024/01-2027/12, National Natural Science Foundation of China, Co-PI
+						     (Grant No. U23A20294)
+						</li>
+						<li>2022/01-2025/12, National Natural Science Foundation of China, PI
+							 (Grant No. 62176081)
+						</li>
+						<li>2019/12-2024/11, National Key R&amp;D Program of China, Co-PI
+							 (Grant No. 2019YFA0706203)
+						</li>
+						<li>2018/01-2020/12, National Natural Science Foundation of China, PI
+							 (Grant No. 61701160)
+						</li>
+						<li>2018/07-2020/06, Provincial Natural Science Foundation of Anhui, PI
+							 (Grant No. 1808085QF186)
+						</li>
+						<li>2020/04-2022/12, Fundamental Research Funds for the Central Universities, PI
+							<!-- <br>Grant No. JZ2020HGPA0111 -->
+						</li>
+						<li>2018/05-2019/12, Fundamental Research Funds for the Central Universities, PI
+							<!-- <br>Grant No. JZ2018HGTB0228 -->
+						</li>
+						<li>2017/03-2018/12, Fundamental Research Funds for the Central Universities, PI
+							<!-- <br>Grant No. JZ2017HGTA0176 -->
+						</li>
+						<li>2018/12-2019/11, SenseTime Research Fund, PI
+							<!-- <br>Grant No. W2018JSKF0481 -->
+						</li>
+
+
+
+
+					</div>
+				</ul>
+
+				<hr>
+
+				<h3><b>Honors &amp; Awards</b></h3>
+				<ul class="graid3-ul" style="list-style-type:disc;">
+					<div style="text-align: justify; display: block; margin-right: auto;">
+
+
+						<li>2026, <a
+								href="https://service.elsevier.com/app/answers/detail/a_id/36374/supporthub/sciencedirect/">
+								<font color="#034EA1">Elsevier 2025 Highly Cited Chinese Researcher</font>
+							</a> (Identified by Elsevier)</li>
+
+						<li>2025, <a href="https://clarivate.com/highly-cited-researchers/">
+								<font color="#034EA1">Clarivate Highly Cited Researcher</font>
+							</a> (Identified by Clarivate)</li>
+
+						<li>2025, <a href="https://www.csig.org.cn/21/202511/52973.html">
+								<font color="#034EA1">China Society of Image and Graphics (CSIG) Young Scientist Award</font>
+							</a> (Identified by CSIG) </li>
+
+						<li>2025, <a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/8">
+								<font color="#034EA1">World’s Top 2% Scientists</font>
+							</a> (Released by Stanford University)</li>
+
+						<li>2025, Elsevier 2024 Highly Cited Chinese Researcher (Identified by Elsevier)</li>
+						<li>2024, National-level Young Talents Program selected</li>
+						<li>2024, Clarivate Highly Cited Researcher (Identified by Clarivate)</li>
+						
+						<li>2024, <a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7">
+								<font color="#034EA1">World’s Top 2% Scientists</font>
+							</a> (Released by Stanford University)</li>
+
+						<li>2024, Elsevier 2023 Highly Cited Chinese Researcher (Identified by Elsevier)</li>
+
+						<li>2023, Clarivate Highly Cited Researcher (Identified by Clarivate)</li>
+						
+						<li>2023, <a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/6">
+								<font color="#034EA1">World’s Top 2% Scientists</font>
+							</a> (Released by Stanford University)</li>
+
+						<li>2023, <a href="https://www.caai.cn/index.php?s=/Home/Article/detail/id/3539.html">
+								<font color="#034EA1">Wu Wen Jun AI Science & Technology Award for Excellent Youth</font>
+							</a> (Identified by CAAI)</li>
+
+						<li>2023, <a href="https://www.cie.org.cn/list_43/12219.html">
+								<font color="#034EA1">Chinese Institute of Electronics Science and Technology Award</font>
+							</a> (Second Class Prize of the Natural Science Category, 3/5)</li>
+
+						<li>2023, Elsevier 2022 Highly Cited Chinese Researcher (Identified by Elsevier)</li>
+
+						<li>2022, <a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/5">
+								<font color="#034EA1">World’s Top 2% Scientists</font>
+							</a> (Released by Stanford University)</li>
+
+						<li>2022, <a href="https://www.cis.org.cn/post/detail/119/6028">
+								<font color="#034EA1">China Instrument Society Jin Guofan Prize for Excellent Youth</font>
+							</a> (Identified by CIS)</li>
+
+						<li>2022, Elsevier 2021 Highly Cited Chinese Researcher (Identified by Elsevier)</li>
+						<li>2021, <a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/3">
+								<font color="#034EA1">World’s Top 2% Scientists</font>
+							</a> (Released by Stanford University)</li>
+
+						<li>2021, Elsevier 2020 Highly Cited Chinese Researcher (Identified by Elsevier)</li>
+						<li>2020, <a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/2">
+								<font color="#034EA1">World’s Top 2% Scientists</font>
+							</a> (Released by Stanford University).</li>
+						<li>2020, <a href="https://forge.ieee-ims.org/awards/andy-chi-best-paper-award">
+								<font color="#034EA1">IEEE Instrumentation and Measurement Society Andy Chi Best Paper Award</font>
+							</a> (Corresponding author)</li>
+
+						<li>2019, <a href="https://kjt.ah.gov.cn/kjzy/kjsj/cxcg/122850801.html">
+								<font color="#034EA1">Anhui Province Science and Technology Award</font>
+							</a> (Second Class Prize of the Natural Science Category, 3/3)</li>
+						
+
+						<li>2017, <a href="https://ietresearch.onlinelibrary.wiley.com/">
+								<font color="#034EA1">Premium Award for Best Paper in IET Image Processing</font>
+							</a> (First author)</li>
+						
+						<li>2017, Excellent Youth Paper Award by Chinese Society of Biomedical Engineering</li>
+						<li>2016, The Zhu Li Yuehua Outstanding Doctoral Scholarship by Chinses Academy of Sciences</li>
+						<li>2015, The President Outstanding Scholarship by Chinese Academy of Sciences</li>
+						<li>2014, Chinese National Scholarship for Excellent Graduate (Doctor) Students</li>
+						<li>2013, Chinese National Scholarship for Excellent Graduate (Master) Students</li>
+						<li>2010, <a href="https://www.ustcif.org.cn/default.php/content/973">
+								<font color="#034EA1">The 30th Guo Moruo Scholarship (The Highest Award for
+									Undergraduate Students at USTC)</font>
+							</a></li>
+						<li>2009, Chinese National Scholarship for Excellent Undergraduate Students</li>
+						<li>2008, Chinese National Scholarship for Excellent Undergraduate Students</li>
+
+
+
+
+
+
+					</div>
+				</ul>
+				<hr>
+
+
+				<h3><b>Academic Activities</b></h3>
+
+				<h4>❈ &nbsp;<b>Editorial Service</b></h4>
+				<ul class="graid3-ul" style="list-style-type:disc;">
+					<div style="text-align: justify; display: block; margin-right: auto;">
+
+						<li> <a
+								href="https://signalprocessingsociety.org/publications-resources/ieee-transactions-image-processing/editorial-board">
+								<font color="#034EA1">IEEE Transactions on Image Processing</font>
+							</a> (CCF A, JCR Q1, IF: 13.7), Associate Editor, 2025-Present</li>
+						<li> <a href="https://www.sciencedirect.com/journal/information-fusion/about/editorial-board">
+								<font color="#034EA1">Information Fusion</font>
+							</a> (CAAI A, JCR Q1, IF: 15.5), Editorial Board Member, 2019-Present</li>
+						<li> <a
+								href="https://signalprocessingsociety.org/publications-resources/ieee-signal-processing-letters/editorial-board">
+								<font color="#034EA1">IEEE Signal Processing Letters</font>
+							</a> (JCR Q2, IF: 3.9), Associate Editor, 2022-Present</li>
+						<li> <a href="https://cjig.cn/zh/info/14147/">
+								<font color="#034EA1">中国图象图形学报(Journal of Image and Graphics)</font>
+							</a> Editorial Board Member, 2022-Present</li>
+
+
+					</div>
+				</ul><br>
+
+				<h4>❈ &nbsp;<b>Professional Affiliations</b></h4>
+				<ul class="graid3-ul" style="list-style-type:disc;">
+					<div style="text-align: justify; display: block; margin-right: auto;">
+
+						<li> IEEE Senior Member</li>
+						<li> The CAAI Intelligent Fusion Technical Committee, Standing Committee Member</li>
+						<li> The CSIG Machine Vision Technical Committee, Committee Member</li>
+						<li> The CSIG Multimedia Technical Committee, Committee Member</li>
+						<li> The CSIG Youth Working Committee, Committee Member</li>
+						<li> The CSIG Publishing Working Committee, Committee Member</li>
+						<li> The CSIG Hefei Member Activity Center, Executive Committee Member</li>
+						<li> The Medical Image Computing and Systems (MICS), Committee Member</li>
+						<li> The Multi-source Information Fusion Technical Committee of the Anhui Artificial
+							Intelligence Society, Chairman</li>
+
+					</div>
+				</ul><br>
+
+
+
+				<!-- <h4>❈ &nbsp;<b>Reviewer for Journals:</b></h4>
+				<ul class="graid3-ul" style="list-style-type:disc;">
+					<div style="text-align: justify; display: block; margin-right: auto;">
+						<li> IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
+						<li> International Journal of Computer Vision (IJCV)</li>
+						<li> IEEE Transactions on Image Processing (TIP)</li>
+						<li> IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</li>
+
+						<li> IEEE Transactions on Multimedia (TMM)</li>
+						<li> IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</li>
+						<li> IEEE Transactions on Geoscience and Remote Sensing (TGRS)</li>
+						<li> IEEE Transactions on Medical Imaging (TMI)</li>
+
+						<li> IEEE Transactions on Computational Imaging (TCI)</li>
+						<li> IEEE Transactions on Biomedical Engineering (TBME)</li>
+						<li> IEEE Transactions on Instrumentation and Measurement (TIM)</li>
+
+						<li> IEEE Signal Processing Letters (SPL)</li>
+
+						<li> Pattern Recognition (PR)</li>
+						<li> Neurocomputing</li>
+						<li> Neural Networks</li>
+						<li> Information Fusion (INFFUS)</li>
+						<li> Engineering Applications of Artificial Intelligence (EAAI)</li>
+						<li> Knowledge-Based Systems (KBS)</li>
+						<li> IEEE/CAA Journal of Automatica Sinica</li>
+						<li> 中国图象图形学报 (Journal of Image and Graphics)</li>
+						<li> 电子学报 (Chinese Journal of Electronics)</li>
+
+					</div>
+				</ul>
+				<br> -->
+
+
+				<!-- <h3><b>Publications:</b></h3>
+				<h4>❈ &nbsp;<b>Journal papers:</b></h4>
+				Note: * indicates the corresponding author.
+
+				<ol class="n8H08c BKnRcf "
+					style="list-style-type: decimal; margin-left: 0; margin-right: 0; padding: 0;">
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Huafeng Li,
+								Zengyi Yang, Yafei Zhang, Wei Jia, Zhengtao Yu, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*,
+								“MulFS-CAP: Multimodal
+								Fusion-supervised Cross-modality Alignment Perception for Unregistered
+								Infrared-visible Image Fusion,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Pattern Analysis and Machine Intelligence</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, in press,
+								2025. </span><span class="C9DxTc " style="font-variant: normal;">(</span><span
+								class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Hot Paper, ESI Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">)</span> <span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">(</span><a class="XqQF9c"
+								href="https://github.com/YR0211/MulFS-CAP" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Yu Shi,
+							</span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*, Juan
+								Cheng, Z. Jane Wang, Xun
+								Chen, “VDMUFusion: A Versatile Diffusion Model-Based Unsupervised Framework
+								for Image Fusion,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Image Processing</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 34, pp. 441-454, 2025.
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">(</span><a
+								class="XqQF9c" href="https://github.com/yuliu316316/VDMUFusion" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Kecheng
+								Zheng, Juan Cheng, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*,
+								“Unfolding coupled
+								convolutional sparse representation for multi-focus image fusion,”
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Information
+								Fusion</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, vol.
+								118, p. 102974,
+								2025.</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">&nbsp;
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">(</span><a
+								class="XqQF9c" href="https://github.com/yuliu316316/CCSR-Net-Fusion" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000;">Dingyi Li, Yang Zhang,
+							</span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000;">*, “Lightweight
+								Efficient Rate-Adaptive Network for Compression-Aware Image Rescaling,”
+							</span><span class="C9DxTc " style="color: #000000; font-style: italic;">IEEE
+								Signal Processing Letters</span><span class="C9DxTc " style="color: #000000;">,
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">vol. 32, pp.
+								691-695, 2025.
+							</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">&nbsp;</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">(</span><a class="XqQF9c"
+								href="https://github.com/5ofwind/LERAN" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">,
+								Zhengzheng Qi, Juan Cheng, Xun
+								Chen, "Rethinking the Effectiveness of Objective Evaluation Metrics in
+								Multi-focus Image Fusion: A Statistic-based Approach," </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Pattern Analysis and Machine Intelligence</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 46, no.
+								8, pp. 5806-5819, 2024. </span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">(</span><a class="XqQF9c"
+								href="https://github.com/yuliu316316/MFIF-Metrics" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Huafeng Li,
+								Junyu Liu, Yafei Zhang</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*, “A Deep
+								Learning Framework
+								for Infrared and Visible Image Fusion without Strict Registration,”
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">International
+								Journal of Computer Vision</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 132, pp. 1625-1644, 2024.
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">(</span><a
+								class="XqQF9c" href="https://github.com/yuliu316316/IVF-WoReg" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Chen Yu,
+								Juan Cheng, Z. Jane
+								Wang, Xun Chen, "MM-Net: A MixFormer-Based Multi-Scale Network for Anatomical
+								and Functional Image Fusion," </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Image Processing</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 33, pp. 2197-2212, 2024.
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">(</span><a
+								class="XqQF9c" href="https://github.com/yuliu316316/MM-Net-Fusion" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Yize Ma,
+								Zhiqin Zhu, Juan
+								Cheng, Xun Chen, “TransSea: Hybrid CNN-Transformer With Semantic Awareness for
+								3-D Brain Tumor Segmentation,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Instrumentation and Measurement</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 73, p. 2521316,
+								2024.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Dingyi Li,
+							</span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*, Zengfu
+								Wang, Jian Yang,
+								“Video Rescaling with Recurrent Diffusion,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Circuits and Systems for Video Technology</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 34, no.
+								10, pp. 9386-9399, 2024.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Yuhang Chen,
+								Aiping Liu, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*, Zhiyang
+								He, Cong Liu, Xun
+								Chen*, “Multi-Dimensional Medical Image Fusion With Complex Sparse
+								Representation,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Biomedical Engineering</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 71, no. 9, pp. 2728-2739,
+								2024.</span><span class="C9DxTc "
+								style="color: #000000; font-family: Arial; font-variant: normal; font-weight: 400;">&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Zhiqin Zhu,
+								Ziyu Wang, Guanqiu Qi, Neal Mazur, Pan Yang, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*, “Brain
+								tumor segmentation in
+								MRI with multi-modality spatial information enhancement and boundary shape
+								correction,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Pattern
+								Recognition</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">,
+								vol. 153, p. 110553,
+								2024.</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Zhiqin Zhu,
+								Mengwei Sun, Guanqiu Qi, Yuanyuan Li, Xinbo Gao, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*, "Sparse
+								Dynamic Volume
+								TransUNet with Multi-level Edge Fusion for Brain Tumor Segmentation,"
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Computers in
+								Biology and Medicine</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 172, p. 108284,
+								2024.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Juan
+								Cheng</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">,
+								Chenchu Yin, Rencheng Song,
+								Jing Fu, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*,
+								“</span><span class="C9DxTc " style="color: #231f20; font-variant: normal;">Facial
+								video</span><span class="C9DxTc "
+								style="color: #231f20; font-variant: normal;">-</span><span class="C9DxTc "
+								style="color: #231f20; font-variant: normal;">based heart rate
+								measurement against irregular motion artifacts,</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Journal of
+								Image and Graphics</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 29, no. 7, pp. 2024-2034,
+								2024. (in Chinese)</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Huafeng Li,
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">Ming
+								Yuan, Jinxing Li, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">,
+								Guangming Lu, Yong Xu,
+								Zhengtao Yu, David Zhang, "Focus Affinity Perception and Super-Resolution
+								Embedding for Multi-Focus Image Fusion," </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Neural Networks and Learning Systems</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, in press,
+								2024.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Xiaowen
+								Zhang, Aiping Liu, Gang Yang, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Xun
+								Chen, “SIMFusion: A
+								semantic information-guided modality-specific fusion network for MR Images,”
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Information
+								Fusion</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, vol.
+								112, p. 102560,
+								2024.</span><span class="C9DxTc "
+								style="color: #000000; font-family: Arial; font-variant: normal; font-weight: 400;">&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Wei Tang,
+								Fazhi He, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, “ITFuse:
+								An interactive
+								transformer for infrared and visible image fusion,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Pattern
+								Recognition</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">,
+								vol. 156, p. 110822,
+								2024.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Ting Lv,
+								Chuanming Ji, Hong Jiang, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">,
+								“HF2TNet: A Hierarchical
+								Fusion Two-stage Training Network for Infrared and Visible Image Fusion,”
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE Signal
+								Processing Letters</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, </span><span class="C9DxTc "
+								style="color: #000000;">vol. 31</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, pp. 3164-3168, 2024.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Jing Zhang,
+								Aiping Liu, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Bensheng
+								Qiu, Qingguo Xie,
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">&nbsp;Xun Chen,
+								"</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">LeGFusion:
+								Locally-enhanced Global Learning for Multi-Modal Image Fusion</span><span
+								class="C9DxTc "
+								style="color: #000000; font-family: Arial; font-variant: normal; font-weight: 400;">,</span><span
+								class="C9DxTc " style="color: #000000; font-variant: normal;">" </span><span
+								class="C9DxTc " style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Sensors
+								Journal</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, vol.
+								24, no. 8, pp.
+								12806-12818, 2024.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Kai Shi,
+								Aiping Liu, Jing Zhang, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Xun
+								Chen, “Medical Image
+								Fusion Based on Multi-level Bidirectional Feature Interaction Network,”
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE Sensors
+								Journal</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, vol.
+								24, no. 12, pp.
+								19428-19441, 2024.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Yuhang Chen,
+							</span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Rabab K.
+								Ward, Xun Chen,
+								“Multi-focus Image Fusion With Complex Sparse Representation,” </span><span
+								class="C9DxTc " style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Sensors
+								Journal</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, vol.
+								24, no. 21, pp.
+								34744-34755, 2024.</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Jinbao Wei,
+								Gang Yang, Zhijie Wang, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Aiping
+								Liu, Xun Chen,
+								“Misalignment-resistant deep unfolding network for multi-modal MRI
+								super-resolution and reconstruction,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Knowledge-Based
+								Systems</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, vol.
+								296, p. 111866,
+								2024.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Hongyu Zhao,
+								Chang Li, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Juan
+								Cheng, Rencheng Song, Xun
+								Chen, “EEG emotion recognition based on source⁃free domain adaptation,”
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Chinese
+								Journal of Biomedical Engineering</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 43, no. 2, pp. 129-142,
+								2024. (in Chinese)</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Zhiqin Zhu,
+								Xianyu He, Guanqiu Qi, Yuanyuan Li, Baisen Cong, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*, “Brain
+								tumor segmentation
+								based on the fusion of deep semantics and edge information in multimodal MRI,”
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Information
+								Fusion</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, vol.
+								91, pp. 376-387, 2023.
+							</span><span class="C9DxTc " style="font-variant: normal;">(</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Hot Paper, ESI Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Haihang
+								Li, Juan Cheng, Xun
+								Chen, “MSCAF-Net: A General Framework for Camouflaged Object Detection via
+								Learning Multi-Scale Context-Aware Features,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Circuits and Systems for Video Technology</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 33, no.
+								9, pp. 4934-3947, 2023. </span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">(</span><a class="XqQF9c"
+								href="https://github.com/yuliu316316/MSCAF-COD" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Zhigang
+								Yang, Juan Cheng, Xun
+								Chen, “Multi-Exposure Image Fusion via Multi-scale and Context-aware Feature
+								Learning,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE Signal
+								Processing Letters</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 30, pp. 100-104, 2023.
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">(</span><a
+								class="XqQF9c" href="https://github.com/yuliu316316/MSCA-MEF" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Yi Wei,
+								Chang Li, Juan Cheng,
+								Rencheng Song, Xun Chen, “Bi-CapsNet: A Binary Capsule Network for EEG-based
+								Emotion Recognition,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE Journal
+								of Biomedical and Health Informatics</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 27, no. 3, pp. 1319-1330,
+								2023.</span><span class="C9DxTc "
+								style="color: #000000; font-family: Arial; font-variant: normal; font-weight: 400;">&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Yi Wei,
+							</span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*, Chang
+								Li, Juan Cheng,
+								Rencheng Song, Xun Chen, “TC-Net: A Transformer Capsule Network for EEG-based
+								Emotion Recognition,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Computers in
+								Biology and Medicine</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 152, p. 106463,
+								2023.</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Jiayi
+								Ma, Qiang Zhang, Wei
+								Wei, Xun Chen, Zheng Liu, “</span><a class="XqQF9c"
+								href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=zh-CN&amp;user=r4cmlNgAAAAJ&amp;sortby=pubdate&amp;citation_for_view=r4cmlNgAAAAJ:_Ybze24A_UAC"
+								target="_blank" style="color: inherit; text-decoration: none;"><span class="C9DxTc "
+									style="color: #000000; font-variant: normal;">Editorial:
+									Multimodal brain image fusion: Methods, evaluations, and
+									applications</span></a><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Frontiers in
+								Neuroscience</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">,
+								vol. 16, p. 1128938,
+								2023.</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Wenyu Zhu,
+								Juan Cheng, Xun Chen, “</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">Multi-modal MR image
+								super-resolution with residual dense attention network,</span><span class="C9DxTc "
+								style="font-variant: normal;">” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Journal of Image and
+								Graphics</span><span class="C9DxTc " style="font-variant: normal;">,
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">vol.
+								28, no. 1, pp. 248-259,</span><span class="C9DxTc " style="font-variant: normal;"> 2023.
+								(In Chinese)&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Lei Wang,
+								Zhengzheng Qi, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*, “The
+								review of multi-focus
+								image fusion methods based on deep learning,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Journal of
+								Image and Graphics</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 28, no. 1, pp. 80-101,
+								2023. (in Chinese)</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Wei Tang,
+								Fazhi He, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, “YDTR:
+								Infrared and Visible
+								Image Fusion via Y-shape Dynamic Transformer,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Multimedia</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 25, pp. 5413-5428,
+								2023.</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">&nbsp;
+							</span><span class="C9DxTc " style="font-variant: normal;">(</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">)&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Juan Cheng, Runqing Liu,
+								Jiajie Li, Rencheng Song, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Xun Chen,
+								"Motion-robust Respiratory Rate Estimation From Camera Videos via Fusing Pixel
+								Movement and Pixel Intensity Information," </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Instrumentation and Measurement</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 72, p. 4008611,
+								2023.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Juan Cheng, Bicheng Yue,
+								Rencheng Song, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Chang Li, Xun
+								Chen, "Motion-robust anterior-posterior imaging ballistocardiography for
+								non-contact heart rate measurements," </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Biomedical
+								Signal Processing and Control</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 86, p. 105307,
+								2023.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Wei Tang,
+								Fazhi He, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Yansong
+								Duan, Tongzhen Si,
+								“DATFuse: Infrared and Visible Image Fusion via Dual Attention Transformer,”
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Circuits and Systems for Video Technology</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 33, no.
+								7, pp. 3159-3172, 2023.</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;"> </span><span class="C9DxTc "
+								style="font-variant: normal;">(</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">)&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Wei Tang,
+								Fazhi He, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">,
+								“TCCFusion: An Infrared and
+								Visible Image Fusion Method based on Transformer and Cross Correlation,”
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Pattern
+								Recognition</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">,
+								vol. 137, p. 109295, 2023.
+							</span><span class="C9DxTc " style="font-variant: normal;">(</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">)&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Xietian
+								Wang, Aiping Liu, Le Wu, Chang Li, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Xun
+								Chen, “A Generalized
+								Zero-shot Learning Scheme for SSVEP-Based BCI System,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Neural Systems and Rehabilitation Engineering</span><span
+								class="C9DxTc " style="color: #000000; font-variant: normal;">, vol. 31, pp.
+								863-874, 2023.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Jing Zhang,
+							</span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Aiping
+								Liu, Qingguo Xie, Rabab
+								Ward, Z. Jane Wang, Xun Chen, "Multi-modal Image Fusion via Self-supervised
+								Transformer," </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE Sensors
+								Journal</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, vol.
+								23, no. 9, pp. 9796-9807,
+								2023.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Muhua Xu,
+								Juan Cheng, Chang Li, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Xun
+								Chen, “Spatio-temporal
+								deep forest for emotion recognition based on facial electromyography signals,”
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Computers in
+								Biology and Medicine</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 156, p. 106689,
+								2023.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Chang Li,
+								Zhongzhen Zhang, Rencheng Song, Juan Cheng, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Xun
+								Chen, “EEG-based Emotion
+								Recognition via Neural Architecture Search,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Affective Computing</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 14, no. </span><span
+								class="C9DxTc " style="color: #000000;">2</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, pp. </span><span class="C9DxTc "
+								style="color: #000000;">957</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">-</span><span class="C9DxTc "
+								style="color: #000000;">968</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, 2023. </span><span class="C9DxTc "
+								style="font-variant: normal;">(</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">)&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Wei Tao, Chang Li, Rencheng
+								Song, Juan Cheng, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Feng Wan, Xun
+								Chen, “EEG-based emotion recognition via channel-wise attention and self
+								attention,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">IEEE Transactions on
+								Affective Computing</span><span class="C9DxTc " style="font-variant: normal;">,
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">vol. 14, no. 1,
+								pp.
+								382-393</span><span class="C9DxTc " style="font-variant: normal;">, 2023.
+								(</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">)&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Chang Li,
+								Zhongzhen Zhang, Xiaodong Zhang, Guoning Huang, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Xun
+								Chen, “EEG-based Emotion
+								Recognition via Transformer Neural Architecture Search”, </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Industrial Informatics</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, </span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">vol. 19, no. 4, pp.
+								6016-6025</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">,
+								2023. </span><span class="C9DxTc " style="font-variant: normal;">(</span><span
+								class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">)&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Yuanyuan Li,
+								Ziyu Wang, Li Yin, Zhiqin Zhu, Guanqiu Qi, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, “X-Net:
+								A dual
+								encoding-decoding method in medical image segmentation,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">The Visual
+								Computer</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">,
+								vol. 39, pp. 2223-2233,
+								2023.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Hao
+								Zhao, Rencheng Song,
+								Xudong Chen, Chang Li, Xun Chen, “SOM-Net: Unrolling the Subspace-based
+								Optimization for Solving Full-wave Inverse Scattering Problems,” </span><span
+								class="C9DxTc " style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Geoscience and Remote Sensing</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 60, p. 2007715,
+								2022.</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Fuhao
+								Mu, Yu Shi, Xun Chen,
+								“SF-Net: A Multi-task Model for Brain Tumor Segmentation in Multimodal MRI via
+								Image Fusion,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE Signal
+								Processing Letters</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 29, pp. 1799-1803,
+								2022.</span><span class="C9DxTc "
+								style="color: #000000; font-family: Arial; font-variant: normal; font-weight: 400;">
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">(</span><a
+								class="XqQF9c" href="https://github.com/yuliu316316/SF-Net" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">,
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">Fuhao Mu, Yu Shi,
+								Juan Cheng,
+								Chang Li, Xun Chen, “Brain Tumor Segmentation in Multimodal MRI via
+								Pixel-level and Feature-level Image Fusion,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Frontiers in
+								Neuroscience</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">,
+								vol. 16, p. 1000587,
+								2022.</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Lei
+								Wang, Huafeng Li, Xun
+								Chen, “Multi-focus image fusion with deep residual learning and focus property
+								detection,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Information
+								Fusion</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, vol.
+								86-87, pp. 1-16, 2022.
+								(</span><a class="XqQF9c" href="https://github.com/yuliu316316/DRL-FPD-MFIF"
+								target="_blank" style="color: inherit; text-decoration: none;"><span
+									class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)&nbsp;
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Yu Shi,
+								Fuhao Mu, Juan Cheng,
+								Chang Li, Xun Chen, “Multimodal MRI Volumetric Data Fusion with Convolutional
+								Neural Networks,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Instrumentation and Measurement</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 71, p. 4006015, 2022.
+								(</span><a class="XqQF9c" href="https://github.com/yuliu316316/3D-CNN-Fusion"
+								target="_blank" style="color: inherit; text-decoration: none;"><span
+									class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">,</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;"> Yu Shi, Fuhao Mu, Juan Cheng,
+								Xun Chen, “Glioma Segmentation-Oriented Multi-modal MR Image Fusion with
+								Adversarial Learning,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE/CAA
+								Journal of Automatica Sinica</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 9, no. 8, pp. 1528-1531,
+								2022. (</span><a class="XqQF9c" href="https://github.com/yuliu316316/GS-MR-Fusion"
+								target="_blank" style="color: inherit; text-decoration: none;"><span
+									class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Rongrong Wu,
+								Lu Tang, Ningning Song, “</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">U-Net for Mediastinal Lymph Node
+								Segmentation in Bronchial Ultrasound Elastic Images,</span><span class="C9DxTc "
+								style="font-variant: normal;">” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Journal of Image and
+								Graphics</span><span class="C9DxTc " style="font-variant: normal;">,
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">vol.
+								21, no. 10, pp. 2082-2091</span><span class="C9DxTc " style="font-variant: normal;">,
+								2022. (In Chinese)&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Juan Cheng,
+								Chuya Zhang, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*, Chang
+								Li, Zhiqin Zhu, Xun
+								Chen, “Glioma segmentation based on feature selection of multi-modal MR
+								images,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Chinese
+								Journal of Biomedical Engineering</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 41, no. 5, pp. 513-526,
+								2022. (in Chinese)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Jing Zhang,
+								Aiping Liu, Dan Wang, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Z. Jane
+								Wang, Xun Chen,
+								“Transformer-based End-to-End Anatomical and Functional Image Fusion,”
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Instrumentation and Measurement</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 71, p. 5019711,
+								2022.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Wei Tang,
+								Fazhi He, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Yansong
+								Duan, “MATR:
+								Multimodal Medical Image Fusion via Multiscale Adaptive Transformer,”
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Image Processing</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 31, pp. 5134-5149,
+								2022.</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">
+							</span><span class="C9DxTc " style="font-variant: normal;">(</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc " style="font-variant: normal;">)
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Chang Li,
+								Xuejuan Lin, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Rencheng
+								Song, Juan Cheng, Xun
+								Chen, “EEG-based Emotion Recognition via Efficient Convolutional Neural
+								Network and Contrastive Learning,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE Sensors
+								Journal</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, vol.
+								22, no. 20, pp.
+								19608-19619, 2022.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Yuhang Chen,
+								Aiping Liu, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Ruobing
+								Qian, Qingguo Xie, Xun
+								Chen, “Image Fusion with Sparse Representation: A Novel Local Contrast-Based
+								Preprocessing Strategy,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE Sensors
+								Letters</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, vol.
+								6, no. 5, p. 7001604,
+								2022.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Chang Li,
+								Yimeng Hou, Rencheng Song, Juan Cheng, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Xun
+								Chen, “Multi-channel
+								EEG-based emotion recognition in the presence of noisy labels,” </span><span
+								class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Science
+								China Information Sciences</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 65, no. 4, p. 140405,
+								2022.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Chang Li,
+								Bin Wang, Silin Zhang, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Rencheng
+								Song, Juan Cheng, Xun
+								Chen, “Emotion recognition from EEG based on multi-task learning with capsule
+								network and attention mechanism,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Computers in
+								Biology and Medicine</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 143, p. 105303, 2022.
+							</span><span class="C9DxTc " style="font-variant: normal;">(</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">)&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Chang Li,
+								Chenhong Sui, Rencheng Song, Juan Cheng, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Xun
+								Chen, “Superpixel-based
+								noise robust sparse unmixing of hyperspectral image,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Geoscience and Remote Sensing Letters</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 19, p. 6004405,
+								2022.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Lei
+								Wang, Juan Cheng, Xun
+								Chen, “Multiscale feature interactive network for multifocus image fusion,”
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Instrumentation and Measurement</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 70, p. 5019316, 2021.
+								(</span><a class="XqQF9c" href="https://github.com/yuliu316316/MSFIN-Fusion"
+								target="_blank" style="color: inherit; text-decoration: none;"><span
+									class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Rencheng
+								Song, Qiao Zhou, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*, Chang
+								Li, Xun Chen, “A
+								convolutional sparsity regularization for solving inverse scattering
+								problems,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Antennas and Wireless Propagation Letters</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 20, no. 12, pp.
+								2285-2289, 2021.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Wei Tang,
+							</span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*, Juan
+								Cheng, Chang Li, Xun
+								Chen, “Green fluorescent protein and phase contrast image fusion via detail
+								preserving cross network,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								Transactions on Computational Imaging</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 7, pp. 584-597, 2021.
+								(</span><a class="XqQF9c" href="https://github.com/yuliu316316/DPCN-Fusion"
+								target="_blank" style="color: inherit; text-decoration: none;"><span
+									class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="color: #000000; font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Huafeng Li, Yueliang Cen,
+							</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">*, Xun Chen,
+								Zhengtao Yu, “Different input resolutions and arbitrary output resolution: A
+								meta learning-based deep framework for infrared and visible image fusion,”
+							</span><span class="C9DxTc " style="font-style: italic; font-variant: normal;">IEEE
+								Transactions on Image
+								Processing</span><span class="C9DxTc " style="font-variant: normal;">, vol.
+								30, pp. 4070-4083, 2021. (</span><a class="XqQF9c"
+								href="https://github.com/yuliu316316/MetaLearning-Fusion" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Xun Chen,
+								Aiping Liu, Rabab. K. Ward, Z. Jane Wang, “Recent advances in sparse
+								representation based medical image fusion,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">IEEE Instrumentation &amp;
+								Measurement Magazine</span><span class="C9DxTc " style="font-variant: normal;">, vol.
+								24, no. 2, pp. 45-53, 2021. (</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Invited
+								Paper</span><span class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.38; margin-bottom: 0.0pt; margin-left: 0.0pt; margin-right: 4.0pt; margin-top: 0.0pt; padding-bottom: 0.0pt; padding-left: 0.0pt; padding-right: 0.0pt; padding-top: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Juan Cheng,
+								Yufei Xu, Rencheng Song, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">, Chang
+								Li, Xun Chen,
+								“Prediction of arterial blood pressure waveforms from photoplethysmogram
+								signals via fully convolutional neural networks,” </span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">Computers in
+								Biology and Medicine</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, vol. 138, p. 104877,
+								2021.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Rencheng Song, Huan Chen,
+								Juan Cheng, Chang Li, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Xun Chen,
+								“PulseGAN: Learning to generate realistic waveforms in remote
+								photoplethysmography,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">IEEE Journal of Biomedical
+								and Health Informatics</span><span class="C9DxTc " style="font-variant: normal;">,
+							</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">vol. 25, no. 5,
+								pp. 1373-1384,
+								2021.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Juan Cheng, Ping Wang,
+								Rencheng Song, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Chang Li, Yong
+								Liu, Xun Chen, “Remote heart rate measurement from near-infrared videos based
+								on joint blind source separation with delay-coordinate transformation,”
+							</span><span class="C9DxTc " style="font-style: italic; font-variant: normal;">IEEE
+								Transactions on
+								Instrumentation and Measurement</span><span class="C9DxTc "
+								style="font-variant: normal;">, vol. 70, p. 5005313, 2021.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Rencheng Song, Jiji Li, Juan
+								Cheng, Chang Li, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Xun Chen,
+								“Motion robust imaging ballistocardiography through a two-step canonical
+								correlation analysis,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">IEEE Transactions on
+								Instrumentation and Measurement</span><span class="C9DxTc "
+								style="font-variant: normal;">, vol. 70, p. 4001710, 2021.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Juan Cheng, Meiyao Chen,
+								Chang Li, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Rencheng Song,
+								Aiping Liu, Xun Chen, “Emotion recognition from multi-channel EEG via deep
+								forest,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">IEEE Journal of Biomedical
+								and Health Informatics</span><span class="C9DxTc " style="font-variant: normal;">, vol.
+								25, no. 2, pp. 453-464, 2021.
+								(</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">)&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Chao Zhang,
+								Chang Li, Juan Cheng, Yadong Zhang, Huiqin Xu, Tao Song, Liang Zhao, Xun Chen,
+								“A practical PET/CT data visualization method with dual-threshold PET
+								colorization and image fusion,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Computers in Biology and
+								Medicine</span><span class="C9DxTc " style="font-variant: normal;">, vol. 126,
+								p. 104050, 2020. (</span><a class="XqQF9c"
+								href="https://github.com/yuliu316316/Visualization" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Yufeng Ding,
+								Chang Li, Juan Cheng, Rencheng Song, Feng Wan, Xun Chen, “Multi-channel
+								EEG-based emotion recognition via a multi-level features guided capsule
+								network,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Computers in Biology and
+								Medicine</span><span class="C9DxTc " style="font-variant: normal;">, vol. 123,
+								p. 103927, 2020.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Lei Wang, Juan
+								Cheng, Chang Li, Xun Chen, “Multi-focus image fusion: A survey of the state of
+								the art,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Information
+								Fusion</span><span class="C9DxTc " style="font-variant: normal;">, vol. 64,
+								pp. 71-91, 2020. (</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Invited
+								Paper, ESI Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">) (</span><a class="XqQF9c"
+								href="https://github.com/yuliu316316/MFIF" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">A
+									Benchmark for MFIF</span></a><span class="C9DxTc "
+								style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Wei Tang, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">*, Juan Cheng,
+								Chang Li, Hu Peng, Xun Chen, “A phase congruency-based green fluorescent
+								protein and phase contrast image fusion method in nonsubsampled shearlet
+								transform domain,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Microscopy Research and
+								Technique</span><span class="C9DxTc " style="font-variant: normal;">, vol. 83,
+								no. 10, pp. 1225-1234, 2020.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Juan Cheng, Fulin Wei,
+							</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">*, Chang Li,
+								Qiang Chen, Xun Chen, “Chinese sign language recognition based on
+								DTW-distance-mapping features,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Mathematical Problems in
+								Engineering</span><span class="C9DxTc " style="font-variant: normal;">, vol.
+								2020, p. 8953670, 2020.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Xinle Wang, Haiyang Qian,
+								Edward J. Ciaccio, Suzanne K. Lewis, Govind Bhagat, Peter H. Green, Shenghao
+								Xu, Liang Huang, Rongke Gao*, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">*, “Celaic
+								disease diagnosis from videocapsle endoscopy images with residual learning and
+								deep feature extraction,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Computer Methods and
+								Programs in Biomedicine</span><span class="C9DxTc " style="font-variant: normal;">, vol.
+								187, p. 105236, 2020.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Yu Zhang, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Peng Sun, Han
+								Yan, Xiaolin Zhao, Li Zhang, “IFCNN: A general image fusion framework based on
+								convolutional neural network,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Information
+								Fusion</span><span class="C9DxTc " style="font-variant: normal;">, vol. 54,
+								pp. 99-118, 2020. (</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc " style="font-variant: normal;">)
+								(</span><a class="XqQF9c" href="https://github.com/uzeful/IFCNN" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Puhong Duan, Xudong Kang,
+								Pedram Ghamisi, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, “Multilevel
+								structure extraction-based multi-sensor data fusion,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Remote
+								Sensing</span><span class="C9DxTc " style="font-variant: normal;">, vol. 12,
+								no. 24, p. 4034, 2020.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Juan Cheng, Xingmao Wang,
+								Rencheng Song, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Chang Li, Xun
+								Chen, “Exploring the Feasibility of Seamless Remote Heart Rate Measurement
+								Using Multiple Synchronized Cameras,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Multimedia Tools and
+								Applications</span><span class="C9DxTc " style="font-variant: normal;">, vol.
+								79, pp. 23023-23043, 2020.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Mingyao Zheng, Guanqiu Qi,
+								Zhiqing Zhu, Yuanyuan Li, Hongyan Wei, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, “Image
+								dehazing by an artificial image fusion method based on adaptive structure
+								decomposition,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">IEEE Sensors
+								Journal</span><span class="C9DxTc " style="font-variant: normal;">, vol. 20,
+								no. 14, pp. 8062-8072, 2020. (</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">)&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Chang Li, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Juan Cheng,
+								Rencheng Song, Jiayi Ma, Chenhong Sui, Xun Chen, “Sparse unmixing of
+								hyperspectral data with bandwise model,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Information
+								Sciences</span><span class="C9DxTc " style="font-variant: normal;">, vol. 512,
+								pp. 1424-1441, 2020.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Xuesong Wang, Chen Chen,
+								Yuhu Cheng, Xun Chen, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, “Zero-shot
+								learning based on deep weighted attribute prediction,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">IEEE
+								Transactions on Systems, Man, and Cybernetics: Systems</span><span class="C9DxTc "
+								style="font-variant: normal;">, vol. 50, no. 8,&nbsp; pp.
+								2948-2957, 2020.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Ming Yin, Xiaoning Liu,
+							</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">*, Xun Chen,
+								“Medical image fusion with parameter-adaptive pulse coupled neural network in
+								nonsubsampled shearlet transform domain,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">IEEE Transactions on
+								Instrumentation and Measurement</span><span class="C9DxTc "
+								style="font-variant: normal;">, vol. 68, no. 1, pp. 49-64, 2019. (</span><span
+								class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">2020
+								IEEE TIM Andy Chi Best Paper Award, ESI Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">) (</span><a class="XqQF9c"
+								href="https://github.com/yuliu316316/NSST-PAPCNN-Fusion" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Xun Chen,
+								Rabab Ward, Z. Jane Wang, “Medical image fusion via convolutional sparsity
+								based morphological component analysis,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">IEEE Signal Processing
+								Letters</span><span class="C9DxTc " style="font-variant: normal;">, vol. 26,
+								no. 3, pp. 485-489, 2019. (</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc " style="font-variant: normal;">)
+								(</span><a class="XqQF9c" href="https://github.com/yuliu316316/CSMCA-Fusion"
+								target="_blank" style="color: inherit; text-decoration: none;"><span
+									class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Chao Zhang,
+								Juan Cheng, Xun Chen, Z. Jane Wang, “A multi-scale data fusion framework for
+								bone age assessment with convolutional neural networks,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Computers in
+								Biology and Medicine</span><span class="C9DxTc " style="font-variant: normal;">, vol.
+								108, pp. 161-173, 2019.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Wei Tang, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">*, Chao Zhang,
+								Juan Cheng, Hu Peng, Xun Chen, “Green fluorescent protein and phase-contrast
+								image fusion via generative adversarial networks,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Computational and
+								Mathematical Methods in Medicine</span><span class="C9DxTc "
+								style="font-variant: normal;">, vol. 2019, p. 5450373, 2019.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Dingyi Li, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Zengfu Wang,
+								“Video super-resolution using non-simultaneous fully recurrent convolutional
+								network,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">IEEE Transactions on Image
+								Processing</span><span class="C9DxTc " style="font-variant: normal;">, vol.
+								28, no. 3, pp. 1342-1355, 2019.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Lei Ma, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Xueliang
+								Zhang, Yuanxin Ye, Gaofei Yin, Brian Alan Johoson, “Deep learning in remote
+								sensing applications: A meta-analysis and review,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">ISPRS
+								Journal of Photogrammetry and Remote Sensing</span><span class="C9DxTc "
+								style="font-variant: normal;">, vol. 152, pp. 166-177, 2019. (</span><span
+								class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Hot Paper, ESI Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Chang Li, Wei Tao, Juan
+								Cheng, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Xun Chen,
+								“Robust multichannel EEG compressed sensing in the presence of mixed noise,”
+							</span><span class="C9DxTc " style="font-style: italic; font-variant: normal;">IEEE Sensors
+								Journal</span><span class="C9DxTc " style="font-variant: normal;">, vol. 19,
+								no. 22, pp. 10574-10583, 2019</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Juan Cheng, Luchang Li,
+								Chang Li, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Aiping Liu,
+								Ruobing Qian, Xun Chen, “Remove diverse artifacts simultaneously from a
+								single-channel EEG based on SSA and ICA: A semi-simulated study,” </span><span
+								class="C9DxTc " style="font-style: italic; font-variant: normal;">IEEE
+								Access</span><span class="C9DxTc " style="font-variant: normal;">, vol. 7, pp.
+								60276-60289, 2019.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Xun Chen, Juan Cheng,
+								Rencheng Song, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Rabab Ward, Z.
+								Jane Wang, “Video-Based Heart Rate Measurement: Recent Advances and Future
+								Prospects,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">IEEE Transactions on
+								Instrumentation and Measurement</span><span class="C9DxTc "
+								style="font-variant: normal;">, vol. 68, no. 10, pp. 3600-3615, 2019.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Xun Chen,
+								Zengfu Wang, Z.Jane Wang, RababWard, Xuesong Wang, “Deep learning for
+								pixel-level image fusion: recent advances and future prospects,” </span><span
+								class="C9DxTc " style="font-style: italic; font-variant: normal;">Information
+								Fusion</span><span class="C9DxTc " style="font-variant: normal;">, vol. 42,
+								pp. 158-173, 2018. (</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Invited
+								Paper, ESI Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Xun Chen, Juan
+								Cheng, Hu Peng, Zengfu Wang, “Infrared and visible image fusion with
+								convolutional neural networks,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">International Journal of
+								Wavelets, Multiresolution and Information Processing</span><span class="C9DxTc "
+								style="font-variant: normal;">, vol. 16, no. 3, 1850018: 1-20,
+								2018. (</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc " style="font-variant: normal;">)&nbsp;
+								(</span><a class="XqQF9c" href="https://github.com/yuliu316316/CNN-IV-Fusion"
+								target="_blank" style="color: inherit; text-decoration: none;"><span
+									class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Chang Li, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Juan Cheng,
+								Rencheng Song, Hu Peng, Qiang Chen, Xun Chen, “Hyperspectral unmixing with
+								bandwise generalized bilinear model,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Remote Sensing</span><span
+								class="C9DxTc " style="font-variant: normal;">, vol. 2018, no. 10, paper ID
+								1600, pp. 1-10, 2018.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Juan Cheng, Fulin Wei, Chang
+								Li, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Aiping Liu,
+								Xun Chen, “Position-independent gesture recognition using sEMG signals via
+								canonical correlation analysis,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Computers in Biology and
+								Medicine</span><span class="C9DxTc " style="font-variant: normal;">, vol. 103,
+								pp. 44-54, 2018.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Zhengyuan Xu, </span><span
+								class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Mingquan Ye,
+								Lei Huang, Hao Yu, Xun Chen, “Patch based collaborative representation with
+								Gabor feature and measurement matrix for face recognition,”, </span><span
+								class="C9DxTc " style="font-style: italic; font-variant: normal;">Mathematical
+								Problems in Engineering</span><span class="C9DxTc " style="font-variant: normal;">,
+								2018, 3025264: 1-13.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Xun Chen, Hu
+								Peng, Zengfu Wang, “Multi-focus image fusion with a deep convolutional neural
+								network,”</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-style: italic; font-variant: normal; font-weight: 700;">
+							</span><span class="C9DxTc " style="font-style: italic; font-variant: normal;">Information
+								Fusion</span><span class="C9DxTc " style="font-variant: normal;">, vol. 36,
+								pp. 191–207, 2017. (</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc " style="font-variant: normal;">)
+								(</span><a class="XqQF9c" href="https://github.com/yuliu316316/CNN-Fusion"
+								target="_blank" style="color: inherit; text-decoration: none;"><span
+									class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Baocai Yin,
+								Jun Yu, Zengfu Wang, “Image classification based on convolutional neural
+								networks with cross-level strategy,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Multimedia Tools and
+								Applications</span><span class="C9DxTc " style="font-variant: normal;">, vol.
+								76, no. 8, pp. 11065-11079, 2017.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Xun Chen, Aiping Liu, Qiang
+								Chen, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Liang Zou,
+								“Simultaneous Ocular and Muscle Artifact Removal From EEG Data by Exploiting
+								Diverse Statistics,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Computers in Biology and
+								Medicine</span><span class="C9DxTc " style="font-variant: normal;">, vol. 88,
+								pp. 1-10, 2017.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Xun Chen,
+								Rabab Ward, Z.Jane Wang, “Image Fusion With Convolutional Sparse
+								Representation,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">IEEE Signal Processing
+								Letters</span><span class="C9DxTc " style="font-variant: normal;">, vol. 23,
+								no. 12, pp. 1882-1886, 2016. (</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc " style="font-variant: normal;">)&nbsp;
+								(</span><a class="XqQF9c" href="https://github.com/yuliu316316/CSR-Fusion"
+								target="_blank" style="color: inherit; text-decoration: none;"><span
+									class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Shuping Liu,
+								Yang Cao, Zengfu Wang, “Automatic chessboard corner detection method,”
+							</span><span class="C9DxTc " style="font-style: italic; font-variant: normal;">IET Image
+								Processing</span><span class="C9DxTc " style="font-variant: normal;">, vol.
+								10, no. 1, pp. 16-23, 2016.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Zengfu Wang,
+								“Dense SIFT for ghost-free multi-exposure fusion,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Journal of
+								Visual Communication and Image Representation</span><span class="C9DxTc "
+								style="font-variant: normal;">, vol. 31, pp. 208-224, 2015. (</span><a class="XqQF9c"
+								href="https://github.com/yuliu316316/DSIFT-EF" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Shuping Liu,
+								Zengfu Wang, “A general framework for image fusion based on multi-scale
+								transform and sparse representation,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Information
+								Fusion</span><span class="C9DxTc " style="font-variant: normal;">, vol. 24,
+								pp. 147-164, 2015. (</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Hot Paper, ESI Highly Cited Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">) (</span><a class="XqQF9c"
+								href="https://github.com/yuliu316316/MST-SR-Fusion-Toolbox" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">MST-SR-Fusion-Toolbox</span></a><span
+								class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Zengfu Wang,
+								“Simultaneous image fusion and denoising with adaptive sparse representation,”
+							</span><span class="C9DxTc " style="font-style: italic; font-variant: normal;">IET Image
+								Processing</span><span class="C9DxTc " style="font-variant: normal;">, vol. 9,
+								no. 5, pp. 347-357, 2015. (</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">2017
+								Premium Award for the Best Paper in IET Image Processing, ESI Highly Cited
+								Paper</span><span class="C9DxTc " style="font-variant: normal;">) (</span><a
+								class="XqQF9c" href="https://github.com/yuliu316316/ASR-Fusion" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Shuping Liu,
+								Zengfu Wang, “Multi-focus image fusion with dense SIFT,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Information
+								Fusion</span><span class="C9DxTc " style="font-variant: normal;">, vol. 23,
+								pp. 139-155, 2015. (</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">ESI
+								Highly Cited Paper</span><span class="C9DxTc " style="font-variant: normal;">)
+								(</span><a class="XqQF9c" href="https://github.com/yuliu316316/DSIFT-MFIF"
+								target="_blank" style="color: inherit; text-decoration: none;"><span
+									class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Shuping Liu, </span><span
+								class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Jun Yu, Zengfu
+								Wang, “Hierarchical static hand gesture recognition by combining finger
+								detection and HOG features,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Journal of Image and
+								Graphics</span><span class="C9DxTc " style="font-variant: normal;">, vol. 20,
+								no. 6, pp. 781-788, 2015. (In Chinese) (</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">2016
+								Journal of Image and Graphics Excellent Paper</span><span class="C9DxTc "
+								style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Baocai Yin, </span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Zengfu Wang,
+								“Moving shadow detection by combining chromaticity and texture invariance,”
+							</span><span class="C9DxTc " style="font-style: italic; font-variant: normal;">Journal of
+								Image and
+								Graphics</span><span class="C9DxTc " style="font-variant: normal;">, vol. 19,
+								no. 6, pp. 896-905, 2014. (In Chinese)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Wenhui Xiang, </span><span
+								class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Yang Cao,
+								Zengfu Wang, “3D Ground Plane Estimation from a Monocular Vehicle-borne
+								Image,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">Robot</span><span class="C9DxTc "
+								style="font-variant: normal;">, vol. 36, no. 1, pp. 76-82,
+								2014. (In Chinese)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Zengfu Wang,
+								“Multi-focus image fusion based on wavelet transform and adaptive block,”
+							</span><span class="C9DxTc " style="font-style: italic; font-variant: normal;">Journal of
+								Image and
+								Graphics</span><span class="C9DxTc " style="font-variant: normal;">, vol. 18,
+								no. 11, pp. 1435-1444, 2013. (In Chinese) (</span><a class="XqQF9c"
+								href="https://github.com/yuliu316316/DWTDE-Fusion" target="_blank"
+								style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+				</ol>
+
+				<h4>❈ &nbsp;<b>Conference papers:</b></h4>
+				<ol class="n8H08c BKnRcf "
+					style="list-style-type: decimal; margin-left: 0; margin-right: 0; padding: 0;">
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Kecheng
+								Zheng, Juan Cheng, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">*</span><span class="C9DxTc "
+								style="color: #000000; font-variant: normal;">, "CCSR-Net: Unfolding Coupled
+								Convolutional Sparse Representation for Multi-focus Image Fusion,"
+							</span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">6th</span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;"> Chinese
+								Conference on Pattern Recognition and Computer Vision (PRCV)</span><span class="C9DxTc "
+								style="font-variant: normal;">, Xiamen, China, Oct. 13-15,
+								2023, LNCS 14434, pp. 285-297.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="color: #000000; font-variant: normal;">Wei Tang,
+								Lei Wang, </span><span class="C9DxTc "
+								style="color: #000000; font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">*, “Green
+								fluorescent protein
+								and phase contrast image fusion via dual attention residual network,”
+							</span><span class="C9DxTc "
+								style="color: #000000; font-style: italic; font-variant: normal;">IEEE
+								International Conference on Medical Imaging Physics and Engineering
+								(ICMIPE)</span><span class="C9DxTc " style="color: #000000; font-variant: normal;">,
+								Hefei, China, Nov. 12-14,
+								2021, pp. 1-6.&nbsp;</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Xun Chen, Chao Zhang,
+							</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu*</span><span class="C9DxTc " style="font-variant: normal;">, “Bone Age
+								Assessment with X-Ray Images Based on Contourlet Motivated Deep Convolutional
+								Networks,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">20th IEEE International
+								Workshop on Multimedia Signal Processing (MMSP)</span><span class="C9DxTc "
+								style="font-variant: normal;">, Vancouver, Canada, Aug. 29-31, 2018, pp.
+								1-6.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Dingyi Li,</span><span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;"> Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Zengfu Wang,
+								“Video super-resolution using motion compensation and residual bidirectional
+								recurrent convolutional network,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">24th IEEE International
+								Conference on Image Processing (ICIP)</span><span class="C9DxTc "
+								style="font-variant: normal;">, Beijing, China, Sep. 17-20, 2017, pp.
+								1642-1646.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Xun Chen, Juan
+								Cheng, Hu Peng, “A medical image fusion method based on convolutional neural
+								networks,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">20th International
+								Conference on Information Fusion (ICIF)</span><span class="C9DxTc "
+								style="font-variant: normal;">, Xi’an, China, July 10-13, 2017, pp. 1070-1076.
+								(</span><a class="XqQF9c" href="https://github.com/yuliu316316/CNN-Medical-Fusion"
+								target="_blank" style="color: inherit; text-decoration: none;"><span
+									class="C9DxTc aw5Odc "
+									style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">
+									<font color="#034EA1">Code</font>
+								</span></a><span class="C9DxTc " style="font-variant: normal;">)</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Baocai Yin,
+								Jun Yu, Zengfu Wang, “Cross-level: A practical strategy for convolutional
+								neural networks based image classification,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">1st CCF Chinese Conference
+								on Computer Vision (CCCV)</span><span class="C9DxTc " style="font-variant: normal;">,
+								Xi’an, China, Sep. 18-20, 2015, CCIS 546, pp.
+								398-406.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Shuping Liu,
+								Yang Cao, Zengfu Wang, “A practical algorithm for automatic chessboard corner
+								detection,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">21th IEEE International
+								Conference on Image Processing (ICIP)</span><span class="C9DxTc "
+								style="font-variant: normal;">, Paris, France, Oct. 27-30, 2014, pp.
+								3394-3398.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Shuping Liu,
+								Zengfu Wang, “Medical Image Fusion by combining nonsubsampled contourlet
+								transform and sparse representation,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">6th Chinese Conference on
+								Pattern Recognition (CCPR)</span><span class="C9DxTc " style="font-variant: normal;">,
+								Nov. 17-19, Changsha, China, 2014, pp.
+								372-381.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc " style="font-variant: normal;">Shuping Liu, </span><span
+								class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Jun Yu, Zengfu
+								Wang, “A static hand gesture recognition algorithm based on Krawtchouk
+								moments,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">6th Chinese Conference on
+								Pattern Recognition (CCPR)</span><span class="C9DxTc " style="font-variant: normal;">,
+								Nov. 17-19, Changsha, China, 2014, pp.
+								321-330.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Zengfu Wang,
+								“A practical pan-sharpening method with wavelet transform and sparse
+								representation,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">10th IEEE International
+								Conference on Imaging Systems and Techniques (IST)</span><span class="C9DxTc "
+								style="font-variant: normal;">, Beijing, China, Oct. 22-23, 2013, pp.
+								288-293.</span>
+						</p>
+					</li>
+					<li dir="ltr" class="zfr3Q TYR86d lsiHE " style="margin-left: 15.0pt;">
+						<p dir="ltr" role="presentation" class="zfr3Q CDt4Ke "
+							style="line-height: 1.38; margin-left: 0.0pt; padding-left: 0.0pt; text-align: justify; text-indent: 0.0pt;">
+							<span class="C9DxTc "
+								style="font-family: Lato, Arial; font-variant: normal; font-weight: 700;">Yu
+								Liu</span><span class="C9DxTc " style="font-variant: normal;">, Zengfu Wang,
+								“Multi-focus image fusion based on sparse representation with adaptive sparse
+								domain selection,” </span><span class="C9DxTc "
+								style="font-style: italic; font-variant: normal;">7th International Conference
+								on Image and Graphics (ICIG)</span><span class="C9DxTc " style="font-variant: normal;">,
+								Qingdao, China, Jul. 26-28, 2013, pp.
+								591-596.&nbsp;</span>
+						</p>
+					</li>
+				</ol> -->
+
+
+
+
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./PROFILE_files/jquery.min.js.下载"></script>
+	<script type="text/javascript" src="./PROFILE_files/bootstrap.js.下载"></script>
+	<script type="text/javascript" src="./PROFILE_files/jquery.banner.js.下载"></script>
+	<script type="text/javascript" src="./PROFILE_files/jquery.prettyPhoto.js.下载"></script>
+	<script type="text/javascript" src="./PROFILE_files/jquery.isotope.js.下载"></script>
+	<script type="text/javascript" src="./PROFILE_files/main.js.下载"></script>
+
+
+
+
+</body>
+
+</html>
