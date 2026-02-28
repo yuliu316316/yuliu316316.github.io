@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="csstransforms csstransforms3d csstransitions">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>YU LIU</title>
+	<link href="./HOME_files/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<link href="./HOME_files/style.css" rel="stylesheet" type="text/css" media="all">
+	<link href="./HOME_files/prettyPhoto.css" rel="stylesheet" type="text/css" media="all">
+	<link href="./HOME_files/css" rel="stylesheet" type="text/css">
+
+	<style>
+		.header {
+			background: #0B2D64;
+			/* 你想换色就改这里 */
+		}
+
+		.people-photo {
+			border-radius: 50%;
+			height: 200px !important;
+			width: 200px !important;
+			box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.2), 0 5px 12px 0 rgba(0, 0, 0, 0.19);
+			margin-bottom: 5px;
+		}
+
+		.thumbnail-mvp {
+			padding: 4px;
+			margin-bottom: 20px;
+			line-height: 1.42857143;
+			text-align: center
+		}
+
+		.thumb-row {
+			display: flex;
+			justify-content: center;
+			/* 整体居中 */
+			gap: 40px;
+			/* 两张图之间间距 */
+		}
+
+		.thumbnail-people {
+			padding: 4px;
+			margin-bottom: 5px;
+			/* height: 340px; */
+			line-height: 1.42857143;
+			text-align: center
+		}
+
+		.container {
+			font-family: Palatino Linotype, Helvetica Neue, Helvetica, Arial, sans-serif;
+		}
+
+		.academicegree {
+			font-size: 2.28rem;
+			/* line-height: 110%; */
+			margin: 1.14rem 0 0.912rem 0;
+		}
+
+		.row:nth-child(2n) {
+			background: whitesmoke;
+		}
+
+		.row {
+			margin-bottom: 50px;
+		}
+
+		.people-topic {
+			font-style: italic;
+			color: #1a237e;
+		}
+
+		.people-name {
+			margin-top: 15px;
+			font-size: 16px;
+			line-height: 1.2;
+			text-align: center;
+			font-family: "Times New Roman";
+		}
+	</style>
+	<script type="text/javascript" src="./HOME_files/jquery-1.12.4.min.js.下载"></script>
+	<script type="text/javascript" src="./HOME_files/counter.js.下载" data-id="2179097"></script>
+</head>
+
+<body>
+	<!---start-wrap--->
+	<!---start-header--->
+	<div class="header">
+		<div class="wrap">
+			<!---start-logo--->
+			<div class="logo">
+				<a href="https://yr0211.github.io">Yu Liu</a>
+			</div>
+			<!---End-logo--->
+			<!---start-top-nav--->
+			<div class="top-nav">
+				<ul>
+					<li id="Home" onclick="func(&#39;Me&#39;)"><a href="https://yr0211.github.io"
+							class="scroll">Home</a></li>
+					<li id="Profile" onclick="func(&#39;Profile&#39;)"><a href="https://yr0211.github.io/PROFILE.html"
+							class="scroll">Profile</a></li>
+					
+					<li id="Profile" onclick="func(&#39;Profile&#39;)"><a href="https://yr0211.github.io/PUBLICATIONS.html"
+							class="scroll">Publications</a></li>
+					<li id="MVPLab" onclick="func(&#39;MVP Lab&#39;)"><a href="https://yr0211.github.io/GROUP.html"
+							class="scroll">Group</a></li>
+					<li id="Profile" onclick="func(&#39;Profile&#39;)"><a href="https://yr0211.github.io/CONTACT.html"
+							class="scroll">CONTACT</a></li>
+					<!--<li id="Profile" onclick="func(&#39;Profile&#39;)"><a href="https://yr0211.github.io/Chinese.html"
+							class="scroll">中文简介</a></li>-->
+				</ul>
+			</div>
+			<div class="clear"> </div>
+			<!---End-top-nav--->
+		</div>
+	</div>
+
+	<script>
+		var lastname = 'Me';
+		function func(name) {
+			var div = document.getElementById(name);
+			div.className = 'active';
+			div = document.getElementById(lastname);
+			div.className = '';
+			lastname = name;
+		}
+		function coming_soon() {
+			alert("Coming soon.");
+		}
+	</script>
+
+	<!---End-wrap--->
+	<div class="content">
+		<div class="grid1" id="me">
+			<!--<div class="welcome-photo">
+				<a class="welcome-photo1"><img id="me1" src="./sub_img/crm6.png" border="0" width="90%" title="name"></a>
+			</div>
+			<br>--->
+
+			<!--<div class="col-md-12">--->
+			<div class="thumb-row">
+				<div class="thumbnail-people">
+					<a href="https://yr0211.github.io/#">
+						<img src="./HOME_files/ly.png" class="people-photo">
+					</a>
+					<div class="people-name"><strong>Yu Liu (刘羽)</strong></div>
+				</div>
+
+
+			</div>
+
+
+
+			<!--</div>
+			<a href="PDF/CV.pdf"><font color="#1C86EE">[CV]</font></a>--->
+
+			<div style="text-align: justify;display: block;margin-right: auto;margin-top: 50px;">
+
+
+				<p><strong>Yu Liu</strong> is a Full Professor and the Head of the Department of Biomedical Engineering at Hefei University of Technology, Hefei, China. 
+					He is the director of Multi-modal Information Fusion and Perception (MIFP) Research Group. 
+					His current research interests include image fusion, medical image processing, computer vision, etc. 
+					He has published over 140 scientific articles in prestigious journals and conferences including IEEE TPAMI, IJCV, IEEE TIP, MedIA, INFFUS, CVPR, ICCV, etc. 
+					His publications have totally received over 20000 citations (Google Scholar). 
+					He is serving as an Associate Editor or Editorial Board Member for journals including IEEE TIP, INFFUS, IEEE SPL, etc. 
+					He was a recipient of the IEEE Instrumentation and Measurement Society Andi Chi Best Paper Award in 2020 and the IET Image Processing Premium (Best Paper) Award in 2017. 
+					He was identified as a Clarivate Highly Cited Researcher (since 2023) and an Elsevier Highly Cited Chinese Researcher (since 2020).
+					<br>
+					<br>
+
+				</p>
+				<p><strong>刘羽</strong>，合肥工业大学仪器科学与光电工程学院教授、博士生导师、生物医学工程系主任，多模态信息融合感知研究团队负责人，<strong>国家高层次青年人才计划入选者，科睿唯安全球高被引科学家</strong>（2023至今），爱思唯尔中国高被引学者（2020至今）。
+					主要研究方向包括多源图像融合、医学图像处理、计算机视觉等，主持和承担国家自然科学基金、国家重点研发计划、教育部学科先导等10余项科研项目。
+					近年来，在IEEE TPAMI、IJCV、IEEE TIP、MedIA、INFFUS、CVPR、ICCV等领域权威期刊和会议上发表论文100余篇，论文谷歌学术总被引20000余次。
+					获中国图象图形学学会青年科学家奖、吴文俊人工智能优秀青年奖、安徽省自然科学二等奖、国际期刊IEEE TIM年度最佳论文奖、安徽省优秀青年研究生导师等奖励。
+					担任IEEE TIP、INFFUS、IEEE SPL、中国图象图形学报等知名期刊编委。
+					<br>
+					<br>
+
+
+					<!-- <strong>
+						<font color="#B31A24">Contact Information: </font>
+					</strong> <br>
+					<font color="#B31A24">地址（Addresss）：</font>安徽省合肥市合肥工业大学屯溪路校区（230009）; Tunxi Road Campus,
+					Hefei University of Technology,
+					Hefei, Anhui 230009, China
+					<br>
+					<font color="#B31A24">电子邮箱（Email）：</font>yuliu@hfut.edu.cn
+					<br>
+					<br> -->
+
+
+
+					<strong>
+						<font color="#B31A24">Open Positions: </font>
+					</strong>
+					<br>
+					<font color="#B31A24">招收博士/硕士研究生：</font>课题组招收具有较强自我驱动力的学生，要求具备扎实的数学基础和较强的编程能力。
+					具体招收名额：博士研究生每年2-3名，硕士研究生每年4-6名。
+					<br>
+					<font color="#B31A24">招收博士后：</font>长期招聘博士后，薪资在30万/年~45万/年，具体详见<a
+						href="https://rsc.hfut.edu.cn/2025/0709/c4106a313649/page.htm" target="_blank">
+						<font color="#034EA1">招聘公告</font>
+					</a>，欢迎电邮咨询。
+					<br>
+					<br>
+
+
+				</p>
+			</div>
+
+
+
+			<div class="grid3" id="experience">
+				<div class="grid3-header" style="align:left;width:65%">
+					<h3 align="left">Recent News</h3>
+				</div>
+
+
+				<div class="grid3-content" style="align:left;width:91%">
+					<div class="grid3-content">
+						<ul class="graid3-ul" style="list-style-type:disc; height: 400px;overflow-y: auto;">
+							<div style="text-align: justify; display: block; margin-right: auto;">
+								<!-- <li><img src="./HOME_files/news2.gif" ,="" width="7%"
+										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2025/12
+									-- One paper has been accepted by <strong>IEEE Transactions on Computational Social
+										Systems</strong> (JCR Q1, IF:4.9).</li> -->
+								<li><img src="./HOME_files/news2.gif" ,="" width="7%"
+										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2026/02
+									-- Three papers has been accepted by <strong>CVPR 2026 </strong> (CCF A).</li>
+								<li><img src="./HOME_files/news2.gif" ,="" width="7%"
+										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2026/02
+									-- One paper has been accepted by <strong>ISPRS Journal of Photogrammetry and Remote Sensing </strong> (JCR Q1).</li>
+								<li><img src="./HOME_files/news2.gif" ,="" width="7%"
+										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2026/01
+									-- Selected once again as a <strong>Highly Cited Chinese Researcher</strong> by Elsevier （for 6 consecutive years）.</li>
+								<li><img src="./HOME_files/news2.gif" ,="" width="7%"
+										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2026/01
+									-- One paper has been accepted by <strong>Medical Image Analysis</strong> (JCR Q1).</li>
+								<li><img src="./HOME_files/news2.gif" ,="" width="7%"
+										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2025/12
+									-- One paper has been accepted by <strong>IEEE Transactions on Neural Networks and Learning Systems</strong> (CAAI A, JCR Q1).</li>
+								<li>2025/11 -- Received the <strong>CSIG Youth Scientist Award</strong> from the China Society of Image and Graphics (CSIG).</li>
+								<li>2025/11 -- Selected once again as a <strong>Highly Cited Researcher</strong> by Clarivate (for 3 consecutive years).</li>
+								<li>2025/10 -- One paper has been accepted by <strong>IEEE Transactions on Image
+										Processing</strong> (CCF A, JCR Q1).</li>
+								<li>2025/09 -- One paper has been accepted by <strong>IEEE Transactions on Image
+										Processing</strong> (CCF A, JCR Q1).</li>
+								<li>2025/08 -- Awarded one <strong>General Program</strong> grant from the National
+									Natural Science Foundation of China (NSFC).</li>
+								<li>2025/06 -- One paper has been accepted by <strong>IEEE Journal of Selected Topics in
+										Signal Processing (JSTSP)</strong> (JCR Q1).</li>
+								<li>2025/03 -- Selected once again as a <strong>Highly Cited Chinese Researcher</strong> by
+									Elsevier (for 5 consecutive years).</li>
+								<li>2025/02 -- One paper has been accepted by <strong>IEEE Transactions on
+										Instrumentation and Measurement</strong> (JCR Q1).</li>
+								<li>2025/01 -- Appointed as an <strong>Associate Editor</strong> of IEEE Transactions on
+									Image Processing (CCF A, JCR Q1).</li>
+								<li>2025/01 -- One paper has been accepted by <strong>Information Fusion</strong> (CAAI A, JCR Q1).</li>
+								<li>2025/01 -- One paper has been accepted by <strong>IEEE Transactions on Pattern
+										Analysis and Machine Intelligence</strong> (CCF A, JCR Q1).</li>
+
+								<li>2024/12 -- Elevated to <strong>IEEE Senior Member</strong>.</li>
+								<li>2024/11 -- One paper has been accepted by <strong>IEEE Transactions on Image
+										Processing</strong> (CCF A, JCR Q1).</li>
+								<li>2024/11 -- Selected once again as a <strong>Highly Cited Researcher</strong> by
+									Clarivate (for 2 consecutive years).</li>
+								<li>2024/10 -- Selected in a <strong>National High-Level Young Talents Program</strong>.</li>
+								<li>2024/05 -- One paper has been accepted by <strong>IEEE Transactions on
+										Instrumentation and Measurement</strong> (JCR Q1).</li>
+								<li>2024/05 -- One paper has been accepted by <strong>IEEE Transactions on Circuits and
+										Systems for Video Technology</strong> (JCR Q1).</li>
+								<li>2024/04 -- One paper has been accepted by <strong>Pattern Recognition</strong> (JCR Q1).</li>
+								<li>2024/03 -- Selected once again as a <strong>Highly Cited Chinese Researcher</strong> by Elsevier (for 4 consecutive years).
+								</li>
+								<li>2024/02 -- One paper has been accepted by <strong>IEEE Transactions on Image
+										Processing</strong> (CCF A, JCR Q1).</li>
+								<li>2024/02 -- One paper has been accepted by <strong>IEEE Transactions on Pattern
+										Analysis and Machine Intelligence</strong> (CCF A, JCR Q1).</li>
+								<li>2024/01 -- Received the <strong>Wu Wenjun Artificial Intelligence Outstanding Youth
+										Award</strong> from CAAI.</li>
+
+								<li>2023/11 -- One paper has been accepted by <strong>International Journal of Computer
+										Vision</strong> (CCF A, JCR Q1).</li>
+								<li>2023/11 -- Selected for the first time as a <strong>Highly Cited Researcher</strong> by Clarivate.</li>
+
+
+
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br>
+
+
+
+
+	<script type="text/javascript" src="./HOME_files/jquery.min.js.下载"></script>
+	<script type="text/javascript" src="./HOME_files/bootstrap.js.下载"></script>
+	<script type="text/javascript" src="./HOME_files/jquery.banner.js.下载"></script>
+	<script type="text/javascript" src="./HOME_files/jquery.prettyPhoto.js.下载"></script>
+	<script type="text/javascript" src="./HOME_files/jquery.isotope.js.下载"></script>
+	<script type="text/javascript" src="./HOME_files/main.js.下载"></script>
+
+
+
+
+	<div class="jvectormap-tip"></div>
+</body>
+
+</html>
