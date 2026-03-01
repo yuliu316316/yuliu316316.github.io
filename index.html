@@ -78,6 +78,43 @@
 			text-align: center;
 			font-family: "Times New Roman";
 		}
+
+		.news-icon{
+  width: 80px;
+  height: auto;
+  vertical-align: text-bottom;
+  border-radius: 0;
+  padding: 0;
+  background: none;
+}
+
+
+		img { max-width: 100%; height: auto; }
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* Keep the small "news" icon from scaling up */
+/* img[src*="news2.gif"] { width: 20px !important; max-width: 20px !important; } */
+
+@media (max-width: 768px) {
+  /* Make overall layout fluid */
+  .wrap, .container { width: 100% !important; }
+  .wrap { padding-left: 15px; padding-right: 15px; }
+
+  /* Avatar + people cards */
+  .thumb-row { flex-wrap: wrap; gap: 16px; }
+  .people-photo { width: 140px !important; height: 140px !important; }
+
+  /* Sections that were using fixed percentages */
+  .grid3-header, .grid3-content { width: 100% !important; }
+
+  /* News list: avoid a fixed 400px height on small screens */
+  .graid3-ul { height: auto !important; max-height: 60vh; }
+
+  /* Nav: allow wrapping instead of overflowing */
+  .top-nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .top-nav ul li { float: none; display: inline-block; }
+}
+
 	</style>
 	<script type="text/javascript" src="./HOME_files/jquery-1.12.4.min.js.下载"></script>
 	<script type="text/javascript" src="./HOME_files/counter.js.下载" data-id="2179097"></script>
@@ -226,20 +263,15 @@
 										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2025/12
 									-- One paper has been accepted by <strong>IEEE Transactions on Computational Social
 										Systems</strong> (JCR Q1, IF:4.9).</li> -->
-								<li><img src="./HOME_files/news2.gif" ,="" width="7%"
-										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2026/02
+								<li><img class="news-icon" src="./HOME_files/news2.gif" alt="">&nbsp;2026/02
 									-- Three papers has been accepted by <strong>CVPR 2026 </strong> (CCF A).</li>
-								<li><img src="./HOME_files/news2.gif" ,="" width="7%"
-										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2026/02
+								<li><img class="news-icon" src="./HOME_files/news2.gif" alt="">&nbsp;2026/02
 									-- One paper has been accepted by <strong>ISPRS Journal of Photogrammetry and Remote Sensing </strong> (JCR Q1).</li>
-								<li><img src="./HOME_files/news2.gif" ,="" width="7%"
-										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2026/01
+								<li><img class="news-icon" src="./HOME_files/news2.gif" alt="">&nbsp;2026/01
 									-- Selected once again as a <strong>Highly Cited Chinese Researcher</strong> by Elsevier （for 6 consecutive years）.</li>
-								<li><img src="./HOME_files/news2.gif" ,="" width="7%"
-										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2026/01
+								<li><img class="news-icon" src="./HOME_files/news2.gif" alt="">&nbsp;2026/01
 									-- One paper has been accepted by <strong>Medical Image Analysis</strong> (JCR Q1).</li>
-								<li><img src="./HOME_files/news2.gif" ,="" width="7%"
-										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2025/12
+								<li><img class="news-icon" src="./HOME_files/news2.gif" alt="">&nbsp;2025/12
 									-- One paper has been accepted by <strong>IEEE Transactions on Neural Networks and Learning Systems</strong> (CAAI A, JCR Q1).</li>
 								<li>2025/11 -- Received the <strong>CSIG Youth Scientist Award</strong> from the China Society of Image and Graphics (CSIG).</li>
 								<li>2025/11 -- Selected once again as a <strong>Highly Cited Researcher</strong> by Clarivate (for 3 consecutive years).</li>
