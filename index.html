@@ -78,104 +78,133 @@
 			text-align: center;
 			font-family: "Times New Roman";
 		}
-	
-        /* ===== Mobile / Responsive overrides ===== */
-        /* Prevent mobile browsers from auto-enlarging text */
-        html {
-            -webkit-text-size-adjust: 100%;
-            text-size-adjust: 100%;
-        }
 
-        /* Make all images responsive by default */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
 
-        /* Improve overall mobile layout */
-        @media (max-width: 768px) {
-            /* Reduce overall font scale a bit */
-            body {
-                font-size: 14px;
-                line-height: 1.5;
-            }
+		/* ===== Mobile / Responsive overrides (v2) ===== */
+		/* Stop iOS/Chrome from auto-enlarging text */
+		html {
+			-webkit-text-size-adjust: 100%;
+			text-size-adjust: 100%;
+		}
 
-            /* Avoid overly large headings set in rem */
-            .academicegree {
-                font-size: 1.35rem;
-                margin: 0.8rem 0 0.6rem 0;
-            }
+		/* Responsive images by default */
+		img {
+			max-width: 100%;
+			height: auto;
+		}
 
-            /* Header/nav spacing */
-            .header .wrap, .wrap {
-                width: 100% !important;
-                padding-left: 12px !important;
-                padding-right: 12px !important;
-                box-sizing: border-box;
-            }
+		/* Avoid fixed-width containers that cause horizontal scrolling */
+		.container {
+			max-width: 100% !important;
+		}
 
-            /* Let nav items wrap instead of squeezing/overflowing */
-            .top-nav ul {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 8px 12px;
-                padding-left: 0;
-                margin: 0;
-            }
-            .top-nav ul li {
-                float: none !important;
-                display: inline-block;
-                margin: 0 !important;
-            }
-            .top-nav ul li a {
-                padding: 8px 10px;
-                font-size: 14px;
-            }
+		/* Improve long lists on small screens */
+		.graid3-ul {
+			-webkit-overflow-scrolling: touch;
+		}
 
-            /* Photo row: allow wrapping and reduce gaps */
-            .thumb-row {
-                flex-wrap: wrap;
-                gap: 18px;
-            }
+		@media (max-width: 992px) {
+			.thumb-row {
+				flex-wrap: wrap;
+				gap: 24px;
+			}
+		}
 
-            /* People photo: scale down on small screens */
-            .people-photo {
-                width: 120px !important;
-                height: 120px !important;
-            }
+		@media (max-width: 768px) {
+			html {
+				font-size: 14px;
+			}
 
-            .people-name {
-                font-size: 14px;
-                margin-top: 10px;
-            }
+			body {
+				font-size: 14px;
+				line-height: 1.55;
+			}
 
-            /* Reduce large vertical whitespace */
-            .row {
-                margin-bottom: 24px;
-            }
+			/* Headings scale down */
+			.academicegree {
+				font-size: 1.35rem;
+				margin: 0.9rem 0 0.6rem 0;
+			}
 
-            /* Keep long news list usable without eating the whole page */
-            .graid3-ul {
-                height: 320px !important;
-            }
+			/* Reduce oversized avatar/photos */
+			.people-photo {
+				width: 120px !important;
+				height: 120px !important;
+			}
 
-            /* Ensure iframes/videos (if any later) fit */
-            iframe, video {
-                max-width: 100%;
-            }
-        }
+			/* Text blocks */
+			.people-name {
+				font-size: 14px;
+				margin-top: 10px;
+			}
 
-        @media (max-width: 420px) {
-            .people-photo {
-                width: 105px !important;
-                height: 105px !important;
-            }
-            .top-nav ul li a {
-                font-size: 13px;
-                padding: 7px 9px;
-            }
-        }
+			.people-topic {
+				font-size: 13px;
+			}
 
+			/* Padding for mobile */
+			.wrap,
+			.header .wrap {
+				width: 100% !important;
+				padding-left: 12px !important;
+				padding-right: 12px !important;
+				box-sizing: border-box;
+			}
+
+			/* Navigation / menu wrap */
+			.top-nav ul {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px 12px;
+				padding-left: 0;
+				margin: 0;
+			}
+
+			.top-nav ul li {
+				float: none !important;
+				display: inline-block;
+				margin: 0 !important;
+			}
+
+			.top-nav ul li a {
+				padding: 8px 10px;
+				font-size: 14px;
+			}
+
+			/* Reduce vertical whitespace */
+			.row {
+				margin-bottom: 28px;
+			}
+
+			.thumbnail-mvp {
+				margin-bottom: 16px;
+			}
+
+			.thumbnail-people {
+				margin-bottom: 12px;
+			}
+
+			/* Scrollable areas height */
+			.graid3-ul {
+				height: 320px !important;
+			}
+		}
+
+		@media (max-width: 420px) {
+			html {
+				font-size: 13px;
+			}
+
+			.people-photo {
+				width: 105px !important;
+				height: 105px !important;
+			}
+
+			.top-nav ul li a {
+				font-size: 13px;
+				padding: 7px 9px;
+			}
+		}
 	</style>
 	<script type="text/javascript" src="./HOME_files/jquery-1.12.4.min.js.下载"></script>
 	<script type="text/javascript" src="./HOME_files/counter.js.下载" data-id="2179097"></script>
@@ -196,15 +225,15 @@
 				<ul>
 					<li id="Home" onclick="func(&#39;Me&#39;)"><a href="https://yuliu316316.github.io/"
 							class="scroll">Home</a></li>
-					<li id="Profile" onclick="func(&#39;Profile&#39;)"><a href="https://yuliu316316.github.io/PROFILE.html"
-							class="scroll">Profile</a></li>
-					
-					<li id="Profile" onclick="func(&#39;Profile&#39;)"><a href="https://yuliu316316.github.io/PUBLICATIONS.html"
-							class="scroll">Publications</a></li>
+					<li id="Profile" onclick="func(&#39;Profile&#39;)"><a
+							href="https://yuliu316316.github.io/PROFILE.html" class="scroll">Profile</a></li>
+
+					<li id="Profile" onclick="func(&#39;Profile&#39;)"><a
+							href="https://yuliu316316.github.io/PUBLICATIONS.html" class="scroll">Publications</a></li>
 					<li id="MVPLab" onclick="func(&#39;MVP Lab&#39;)"><a href="https://yuliu316316.github.io/GROUP.html"
 							class="scroll">Group</a></li>
-					<li id="Profile" onclick="func(&#39;Profile&#39;)"><a href="https://yuliu316316.github.io/CONTACT.html"
-							class="scroll">CONTACT</a></li>
+					<li id="Profile" onclick="func(&#39;Profile&#39;)"><a
+							href="https://yuliu316316.github.io/CONTACT.html" class="scroll">CONTACT</a></li>
 					<!--<li id="Profile" onclick="func(&#39;Profile&#39;)"><a href="https://yuliu316316.github.io/Chinese.html"
 							class="scroll">中文简介</a></li>-->
 				</ul>
@@ -256,14 +285,19 @@
 			<div style="text-align: justify;display: block;margin-right: auto;margin-top: 50px;">
 
 
-				<p><strong>Yu Liu</strong> is a Full Professor and the Head of the Department of Biomedical Engineering at Hefei University of Technology, Hefei, China. 
-					He is the director of Multi-modal Information Fusion and Perception (MIFP) Research Group. 
-					His current research interests include image fusion, medical image processing, computer vision, etc. 
-					He has published over 140 scientific articles in prestigious journals and conferences including IEEE TPAMI, IJCV, IEEE TIP, MedIA, INFFUS, CVPR, ICCV, etc. 
-					His publications have totally received over 20000 citations (Google Scholar). 
-					He is serving as an Associate Editor or Editorial Board Member for journals including IEEE TIP, INFFUS, IEEE SPL, etc. 
-					He was a recipient of the IEEE Instrumentation and Measurement Society Andi Chi Best Paper Award in 2020 and the IET Image Processing Premium (Best Paper) Award in 2017. 
-					He was identified as a Clarivate Highly Cited Researcher (since 2023) and an Elsevier Highly Cited Chinese Researcher (since 2020).
+				<p><strong>Yu Liu</strong> is a Full Professor and the Head of the Department of Biomedical Engineering
+					at Hefei University of Technology, Hefei, China.
+					He is the director of Multi-modal Information Fusion and Perception (MIFP) Research Group.
+					His current research interests include image fusion, medical image processing, computer vision, etc.
+					He has published over 140 scientific articles in prestigious journals and conferences including IEEE
+					TPAMI, IJCV, IEEE TIP, MedIA, INFFUS, CVPR, ICCV, etc.
+					His publications have totally received over 20000 citations (Google Scholar).
+					He is serving as an Associate Editor or Editorial Board Member for journals including IEEE TIP,
+					INFFUS, IEEE SPL, etc.
+					He was a recipient of the IEEE Instrumentation and Measurement Society Andi Chi Best Paper Award in
+					2020 and the IET Image Processing Premium (Best Paper) Award in 2017.
+					He was identified as a Clarivate Highly Cited Researcher (since 2023) and an Elsevier Highly Cited
+					Chinese Researcher (since 2020).
 					<br>
 					<br>
 
@@ -329,18 +363,24 @@
 									-- Three papers has been accepted by <strong>CVPR 2026 </strong> (CCF A).</li>
 								<li><img src="./HOME_files/news2.gif" ,="" width="7%"
 										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2026/02
-									-- One paper has been accepted by <strong>ISPRS Journal of Photogrammetry and Remote Sensing </strong> (JCR Q1).</li>
+									-- One paper has been accepted by <strong>ISPRS Journal of Photogrammetry and Remote
+										Sensing </strong> (JCR Q1).</li>
 								<li><img src="./HOME_files/news2.gif" ,="" width="7%"
 										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2026/01
-									-- Selected once again as a <strong>Highly Cited Chinese Researcher</strong> by Elsevier （for 6 consecutive years）.</li>
+									-- Selected once again as a <strong>Highly Cited Chinese Researcher</strong> by
+									Elsevier （for 6 consecutive years）.</li>
 								<li><img src="./HOME_files/news2.gif" ,="" width="7%"
 										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2026/01
-									-- One paper has been accepted by <strong>Medical Image Analysis</strong> (JCR Q1).</li>
+									-- One paper has been accepted by <strong>Medical Image Analysis</strong> (JCR Q1).
+								</li>
 								<li><img src="./HOME_files/news2.gif" ,="" width="7%"
 										style=" background: none; vertical-align: text-bottom; border-radius: 0; padding: 0; ">&nbsp;2025/12
-									-- One paper has been accepted by <strong>IEEE Transactions on Neural Networks and Learning Systems</strong> (CAAI A, JCR Q1).</li>
-								<li>2025/11 -- Received the <strong>CSIG Youth Scientist Award</strong> from the China Society of Image and Graphics (CSIG).</li>
-								<li>2025/11 -- Selected once again as a <strong>Highly Cited Researcher</strong> by Clarivate (for 3 consecutive years).</li>
+									-- One paper has been accepted by <strong>IEEE Transactions on Neural Networks and
+										Learning Systems</strong> (CAAI A, JCR Q1).</li>
+								<li>2025/11 -- Received the <strong>CSIG Youth Scientist Award</strong> from the China
+									Society of Image and Graphics (CSIG).</li>
+								<li>2025/11 -- Selected once again as a <strong>Highly Cited Researcher</strong> by
+									Clarivate (for 3 consecutive years).</li>
 								<li>2025/10 -- One paper has been accepted by <strong>IEEE Transactions on Image
 										Processing</strong> (CCF A, JCR Q1).</li>
 								<li>2025/09 -- One paper has been accepted by <strong>IEEE Transactions on Image
@@ -349,13 +389,15 @@
 									Natural Science Foundation of China (NSFC).</li>
 								<li>2025/06 -- One paper has been accepted by <strong>IEEE Journal of Selected Topics in
 										Signal Processing (JSTSP)</strong> (JCR Q1).</li>
-								<li>2025/03 -- Selected once again as a <strong>Highly Cited Chinese Researcher</strong> by
+								<li>2025/03 -- Selected once again as a <strong>Highly Cited Chinese Researcher</strong>
+									by
 									Elsevier (for 5 consecutive years).</li>
 								<li>2025/02 -- One paper has been accepted by <strong>IEEE Transactions on
 										Instrumentation and Measurement</strong> (JCR Q1).</li>
 								<li>2025/01 -- Appointed as an <strong>Associate Editor</strong> of IEEE Transactions on
 									Image Processing (CCF A, JCR Q1).</li>
-								<li>2025/01 -- One paper has been accepted by <strong>Information Fusion</strong> (CAAI A, JCR Q1).</li>
+								<li>2025/01 -- One paper has been accepted by <strong>Information Fusion</strong> (CAAI
+									A, JCR Q1).</li>
 								<li>2025/01 -- One paper has been accepted by <strong>IEEE Transactions on Pattern
 										Analysis and Machine Intelligence</strong> (CCF A, JCR Q1).</li>
 
@@ -364,13 +406,16 @@
 										Processing</strong> (CCF A, JCR Q1).</li>
 								<li>2024/11 -- Selected once again as a <strong>Highly Cited Researcher</strong> by
 									Clarivate (for 2 consecutive years).</li>
-								<li>2024/10 -- Selected in a <strong>National High-Level Young Talents Program</strong>.</li>
+								<li>2024/10 -- Selected in a <strong>National High-Level Young Talents Program</strong>.
+								</li>
 								<li>2024/05 -- One paper has been accepted by <strong>IEEE Transactions on
 										Instrumentation and Measurement</strong> (JCR Q1).</li>
 								<li>2024/05 -- One paper has been accepted by <strong>IEEE Transactions on Circuits and
 										Systems for Video Technology</strong> (JCR Q1).</li>
-								<li>2024/04 -- One paper has been accepted by <strong>Pattern Recognition</strong> (JCR Q1).</li>
-								<li>2024/03 -- Selected once again as a <strong>Highly Cited Chinese Researcher</strong> by Elsevier (for 4 consecutive years).
+								<li>2024/04 -- One paper has been accepted by <strong>Pattern Recognition</strong> (JCR
+									Q1).</li>
+								<li>2024/03 -- Selected once again as a <strong>Highly Cited Chinese Researcher</strong>
+									by Elsevier (for 4 consecutive years).
 								</li>
 								<li>2024/02 -- One paper has been accepted by <strong>IEEE Transactions on Image
 										Processing</strong> (CCF A, JCR Q1).</li>
@@ -381,7 +426,8 @@
 
 								<li>2023/11 -- One paper has been accepted by <strong>International Journal of Computer
 										Vision</strong> (CCF A, JCR Q1).</li>
-								<li>2023/11 -- Selected for the first time as a <strong>Highly Cited Researcher</strong> by Clarivate.</li>
+								<li>2023/11 -- Selected for the first time as a <strong>Highly Cited Researcher</strong>
+									by Clarivate.</li>
 
 
 
