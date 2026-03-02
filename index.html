@@ -3,8 +3,8 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=1200, initial-scale=1, maximum-scale=5, user-scalable=yes">
-
+	<meta name="viewport" id="vp" content="width=1200">
+<meta name="format-detection" content="telephone=no">
 	<title>YU LIU</title>
 	<link href="./HOME_files/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 	<link href="./HOME_files/style.css" rel="stylesheet" type="text/css" media="all">
@@ -83,9 +83,32 @@
 	</style>
 	<script type="text/javascript" src="./HOME_files/jquery-1.12.4.min.js.下载"></script>
 	<script type="text/javascript" src="./HOME_files/counter.js.下载" data-id="2179097"></script>
+
 <style>
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
 </style>
+
+	<script>
+(function() {
+  var DESKTOP_WIDTH = 1200;
+  function setViewport() {
+    var meta = document.getElementById('vp');
+    if (!meta) return;
+    var w = Math.min(window.screen.width, window.innerWidth || window.screen.width);
+    var scale = w / DESKTOP_WIDTH;
+    scale = Math.max(0.25, Math.min(scale, 1));
+    meta.setAttribute('content',
+      'width=' + DESKTOP_WIDTH +
+      ', initial-scale=' + scale.toFixed(4) +
+      ', minimum-scale=' + scale.toFixed(4) +
+      ', maximum-scale=5, user-scalable=yes');
+  }
+  window.addEventListener('load', setViewport);
+  window.addEventListener('resize', setViewport);
+  window.addEventListener('orientationchange', setViewport);
+  setViewport();
+})();
+</script>
 
 </head>
 
